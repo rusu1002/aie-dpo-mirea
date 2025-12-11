@@ -185,16 +185,105 @@ def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> 
     flags["max_missing_share"] = max_missing_share
     flags["too_many_missing"] = max_missing_share > 0.5
 
-    # Простейший «скор» качества
-    score = 1.0
-    score -= max_missing_share  # чем больше пропусков, тем хуже
-    if summary.n_rows < 100:
-        score -= 0.2
-    if summary.n_cols > 100:
-        score -= 0.1
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+    # Проверка на константные колонки
+    flags["has_constant_columns"] = False
+    constant_columns = []
 
+    for col_summary in summary.columns:
+        if col_summary.unique == 1 and col_summary.missing == 0:
+            flags["has_constant_columns"] = True
+            constant_columns.append(col_summary.name)
+        elif col_summary.unique == 0:
+            flags["has_constant_columns"] = True
+            constant_columns.append(col_summary.name)
+    
+    flags["constant_columns"] = constant_columns
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+    # Проверка на высокую кардинальность категориальных признаков
+    flags["has_high_cardinality_categoricals"] = False
+    high_cardinality_categoricals_columns = []
+
+    for col_summary in summary.columns:
+        is_categorical = (
+            "object" in col_summary.dtype.lower() or
+            "string" in col_summary.dtype.lower() or
+            "category" in col_summary.dtype.lower() or
+            (not col_summary.is_numeric and col_summary.unique > 0)
+        )
+        
+        if is_categorical and summary.n_rows > 0:
+            # Доля уникальных значений от общего числа строк должна быть меньше 50%
+            unique_share = col_summary.unique / summary.n_rows
+            if unique_share > 0.5:
+                flags["has_high_cardinality_categoricals"] = True
+                high_cardinality_categoricals_columns.append(col_summary.name)
+    
+    flags["high_cardinality_categoricals_columns"] = high_cardinality_categoricals_columns
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+    # Проверка ID-колонок на дубликаты
+    id_columns = []
+    for col_summary in summary.columns:
+        col_name = col_summary.name.lower()
+        
+        is_id = any(id_term in col_name for id_term in 
+                             ['id', 'key', 'code', 'номер', 'number'])
+        if is_id:
+            id_columns.append(col_summary.name)
+    
+    flags["has_suspicious_id_duplicates"] = False
+    for id_col in id_columns:
+        for col_summary in summary.columns:
+            if col_summary.name == id_col:
+                # Дубликаты есть, если unique < n_rows (если бы не было пропусков)
+                unique_if_no_duplicates = col_summary.non_null
+                if col_summary.unique < unique_if_no_duplicates:
+                    # duplicate_count = unique_if_no_duplicates - col_summary.unique
+                    flags["has_suspicious_id_duplicates"] = True
+                break
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+    score = 1.0
+    penalties = 0.0
+    
+    # Штраф за пропуски
+    score -= max_missing_share
+    
+    # Штрафы за количество строк и колонок
+    if flags["too_few_rows"]:
+        penalties += 0.2
+    if flags["too_many_columns"]:
+        penalties += 0.1
+    
+    # Штраф за константные колонки
+    if flags["has_constant_columns"]:
+        penalties += 0.1 * min(len(flags["constant_columns"]) / summary.n_cols, 1.0)
+    
+    # Штраф за кардинальность
+    if flags["has_high_cardinality_categoricals"]:
+        penalties += 0.1 * min(len(flags["high_cardinality_categoricals_columns"]) / summary.n_cols, 1.0)
+    
+    # Штраф за дубликаты id
+    if flags["has_suspicious_id_duplicates"]:
+        penalties += 0.1
+    
+    score -= penalties
     score = max(0.0, min(1.0, score))
-    flags["quality_score"] = score
+    
+    flags["quality_score"] = round(score, 4)
+
+    # # Простейший «скор» качества
+    # score = 1.0
+    # score -= max_missing_share  # чем больше пропусков, тем хуже
+    # if summary.n_rows < 100:
+    #     score -= 0.2
+    # if summary.n_cols > 100:
+    #     score -= 0.1
+
+    # score = max(0.0, min(1.0, score))
+    # flags["quality_score"] = score
 
     return flags
 
