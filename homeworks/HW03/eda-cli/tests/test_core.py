@@ -15,9 +15,12 @@ from eda_cli.core import (
 def _sample_df() -> pd.DataFrame:
     return pd.DataFrame(
         {
-            "age": [10, 20, 30, None],
-            "height": [140, 150, 160, 170],
-            "city": ["A", "B", "A", None],
+            "id": [1, 2, 2, 3, 4],
+            "age": [10, 20, 30, None, 50],
+            "height": [140, 150, 160, 170, 180],
+            "city": ["A", "B", "A", None, "B"],
+            "sex": ["m", "m", "m", "m", "m"],
+            "race": ["A", "B", "C", "D", "E"]
         }
     )
 
@@ -26,8 +29,8 @@ def test_summarize_dataset_basic():
     df = _sample_df()
     summary = summarize_dataset(df)
 
-    assert summary.n_rows == 4
-    assert summary.n_cols == 3
+    assert summary.n_rows == 5
+    assert summary.n_cols == 6
     assert any(c.name == "age" for c in summary.columns)
     assert any(c.name == "city" for c in summary.columns)
 
@@ -36,16 +39,25 @@ def test_summarize_dataset_basic():
     assert "missing_share" in summary_df.columns
 
 
-def test_missing_table_and_quality_flags():
+def test_missing_table():
     df = _sample_df()
     missing_df = missing_table(df)
 
     assert "missing_count" in missing_df.columns
     assert missing_df.loc["age", "missing_count"] == 1
 
+
+# Тест, проверяющий новые эвристики
+def test_quality_flags():
+    df = _sample_df()
+    missing_df = missing_table(df)
     summary = summarize_dataset(df)
+    
     flags = compute_quality_flags(summary, missing_df)
     assert 0.0 <= flags["quality_score"] <= 1.0
+    assert flags["has_constant_columns"] == True
+    assert flags["has_suspicious_id_duplicates"] == True
+    assert flags["has_high_cardinality_categoricals"] == True
 
 
 def test_correlation_and_top_categories():
