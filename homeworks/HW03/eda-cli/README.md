@@ -38,7 +38,7 @@ uv run eda-cli overview data/example.csv
 ### Полный EDA-отчёт
 
 ```bash
-uv run eda-cli report data/example.csv --out-dir reports
+uv run eda-cli report data/example.csv --out-dir reports --max-hist-columns 6 --top-k-categories 5 --title EDA-отчёт --min-missing-share 0.3 --json-summary
 ```
 
 Параметры:
@@ -49,12 +49,14 @@ uv run eda-cli report data/example.csv --out-dir reports
 - `--max_hist_columns` – максимум числовых колонок для гистограмм (по умолчанию `6`)
 - `--top_k_categories` – кол-во top-значений для категориальных признаков (по умолчанию `5`)
 - `--title` – заголовок отчёта в Markdown (по умолчанию `EDA-отчёт`)
-- `--min_missing_share` – Порог доли пропусков, выше которого колонка считается проблемной (по умолчанию `0.3`)
+- `--min_missing_share` – порог доли пропусков, выше которого колонка считается проблемной (по умолчанию `0.3`)
+- `--json-summary` - создание сводки в формате JSON по всему датасету (по умолчанию `False`)
 
 В результате в каталоге `reports/` появятся:
 
 - `report.md` – основной отчёт в Markdown;
 - `summary.csv` – таблица по колонкам;
+- `summary.json` – сводка json по датасету;
 - `missing.csv` – пропуски по колонкам;
 - `correlation.csv` – корреляционная матрица (если есть числовые признаки);
 - `top_categories/*.csv` – top-k категорий по строковым признакам (значение параметра `top_k_categories`);

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 from typing import Optional
 
@@ -14,6 +15,7 @@ from .core import (
     missing_table,
     summarize_dataset,
     top_categories,
+    create_json_summary,
 )
 from .viz import (
     plot_correlation_heatmap,
@@ -71,6 +73,7 @@ def report(
     top_k_categories: int = typer.Option(5, help="Сколько top-значений выводить для категориальных признаков. Значение по умолчанию: 5"),
     title: str = typer.Option("EDA-отчёт", help="Заголовок отчёта в Markdown. Значение по умолчанию: 'EDA-отчёт'"),
     min_missing_share: float = typer.Option(0.3, help="Порог доли пропусков, выше которого колонка считается проблемной. Значение по умолчанию: 0.3", min=0.0, max=1.0),
+    json_summary: bool = typer.Option(False, help="Создание сводки в формате JSON.")
 ) -> None:
     """
     Сгенерировать полный EDA-отчёт:
@@ -79,6 +82,7 @@ def report(
     - корреляционная матрица;
     - top-k категорий по категориальным признакам;
     - картинки: гистограммы, матрица пропусков, heatmap корреляции.
+    - JSON-сводка по всему датасету
     """
     out_root = Path(out_dir)
     out_root.mkdir(parents=True, exist_ok=True)
@@ -169,6 +173,33 @@ def report(
         f.write(f"Показаны гистограммы только для **{max_hist_columns}** числовых колонок.\n")
         f.write("См. файлы `hist_*.png`.\n")
 
+# ------------------------------------------------------------------------------------------------------------------------------------------------
+    # 5. Если запрошена JSON-сводка, создаем ее
+    if json_summary:
+        # Определяем проблемные колонки по пропускам
+        problematic_missing_cols = []
+        if not missing_df.empty:
+            problematic_missing_cols = missing_df[
+                missing_df["missing_share"] > min_missing_share
+            ].index.tolist()
+        
+        # Создаем JSON-сводку
+        json_data = create_json_summary(
+            dataset_summary=summary,
+            quality_flags=quality_flags,
+            problematic_missing_cols=problematic_missing_cols,
+            missing_df=missing_df,
+            title=title,
+            min_missing_share=min_missing_share,
+            path=path
+        )
+        
+        # Сохраняем JSON-файл
+        json_path = out_root / "summary.json"
+        with json_path.open("w", encoding="utf-8") as json_file:
+            json.dump(json_data, json_file, ensure_ascii=False, indent=2, default=str)
+
+# ------------------------------------------------------------------------------------------------------------------------------------------------
     # 5. Картинки
     plot_histograms_per_column(df, out_root, max_columns=max_hist_columns)
     plot_missing_matrix(df, out_root / "missing_matrix.png")
@@ -178,6 +209,7 @@ def report(
     typer.echo(f"- Основной markdown: {md_path}")
     typer.echo("- Табличные файлы: summary.csv, missing.csv, correlation.csv, top_categories/*.csv")
     typer.echo("- Графики: hist_*.png, missing_matrix.png, correlation_heatmap.png")
+    typer.echo(f"- JSON-сводка: {json_path}")
 
 
 if __name__ == "__main__":

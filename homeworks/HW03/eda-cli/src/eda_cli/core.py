@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from dataclasses import dataclass, asdict
+from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence
 
 import pandas as pd
@@ -286,6 +287,159 @@ def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> 
     # flags["quality_score"] = score
 
     return flags
+
+
+# Функция для создания JSON-сводки
+def create_json_summary(
+    dataset_summary: DatasetSummary,
+    quality_flags: Dict[str, Any],
+    problematic_missing_cols: List[str],
+    missing_df: pd.DataFrame,
+    title: str,
+    min_missing_share: float,
+    path: str
+) -> Dict[str, Any]:
+    """
+    Создает компактную JSON-сводку для EDA отчета на основе DatasetSummary.
+    """
+    # Считаем количество колонок по типам
+    n_numeric = sum(1 for col in dataset_summary.columns if col.is_numeric)
+    n_categorical = sum(1 for col in dataset_summary.columns if not col.is_numeric)
+    
+    # Извлекаем списки колонок по разным критериям
+    constant_columns = quality_flags.get('constant_columns', [])
+    high_cardinality_columns = quality_flags.get('high_cardinality_categoricals_columns', [])
+    
+    # Получаем информацию о пропусках для проблемных колонок
+    problematic_missing_details = []
+    for col in problematic_missing_cols:
+        # Находим соответствующую колонку в DatasetSummary
+        col_summary = next((c for c in dataset_summary.columns if c.name == col), None)
+        if col_summary:
+            problematic_missing_details.append({
+                "column": col,
+                "missing_count": col_summary.missing,
+                "missing_share": col_summary.missing_share,
+                "non_null_count": col_summary.non_null
+            })
+    
+    # Собираем информацию о колонках с высоким количеством уникальных значений
+    high_cardinality_details = []
+    for col_name in high_cardinality_columns:
+        col_summary = next((c for c in dataset_summary.columns if c.name == col_name), None)
+        if col_summary:
+            high_cardinality_details.append({
+                "column": col_name,
+                "unique_count": col_summary.unique,
+                "dtype": col_summary.dtype
+            })
+    
+    # Собираем информацию о константных колонках
+    constant_columns_details = []
+    for col_name in constant_columns:
+        col_summary = next((c for c in dataset_summary.columns if c.name == col_name), None)
+        if col_summary:
+            constant_columns_details.append({
+                "column": col_name,
+                "unique_count": col_summary.unique,
+                "dtype": col_summary.dtype,
+                "example_values": col_summary.example_values
+            })
+    
+    # Создаем сводку по числовым колонкам
+    numeric_columns_summary = []
+    for col in dataset_summary.columns:
+        if col.is_numeric:
+            numeric_columns_summary.append({
+                "column": col.name,
+                "min": col.min,
+                "max": col.max,
+                "mean": col.mean,
+                "std": col.std,
+                "missing_share": col.missing_share
+            })
+    
+    # Создаем сводку по категориальным колонкам
+    categorical_columns_summary = []
+    for col in dataset_summary.columns:
+        if not col.is_numeric:
+            categorical_columns_summary.append({
+                "column": col.name,
+                "unique_count": col.unique,
+                "missing_share": col.missing_share,
+                "dtype": col.dtype
+            })
+    
+    # Собираем полную JSON-сводку
+    return {
+        "report_metadata": {
+            "title": title,
+            "source_file": Path(path).name,
+            "source_path": str(Path(path).resolve()),
+            "min_missing_share_threshold": min_missing_share
+        },
+        "dataset_overview": {
+            "n_rows": dataset_summary.n_rows,
+            "n_columns": dataset_summary.n_cols,
+            "n_numeric_columns": n_numeric,
+            "n_categorical_columns": n_categorical,
+            "total_missing_values": sum(col.missing for col in dataset_summary.columns),
+            "total_missing_share": sum(col.missing for col in dataset_summary.columns) / 
+                                  (dataset_summary.n_rows * dataset_summary.n_cols) 
+                                  if dataset_summary.n_rows * dataset_summary.n_cols > 0 else 0
+        },
+        "quality_assessment": {
+            "quality_score": quality_flags.get('quality_score', 0.0),
+            "max_missing_share": quality_flags.get('max_missing_share', 0.0),
+            "issues": {
+                "too_few_rows": quality_flags.get('too_few_rows', False),
+                "too_many_columns": quality_flags.get('too_many_columns', False),
+                "too_many_missing": quality_flags.get('too_many_missing', False),
+                "has_constant_columns": quality_flags.get('has_constant_columns', False),
+                "has_high_cardinality_categoricals": quality_flags.get('has_high_cardinality_categoricals', False),
+                "has_suspicious_id_duplicates": quality_flags.get('has_suspicious_id_duplicates', False)
+            }
+        },
+        "problematic_columns": {
+            "by_missing_threshold": {
+                "count": len(problematic_missing_cols),
+                "columns": problematic_missing_cols,
+                "details": problematic_missing_details
+            },
+            "constant_columns": {
+                "count": len(constant_columns),
+                "columns": constant_columns,
+                "details": constant_columns_details
+            },
+            "high_cardinality_columns": {
+                "count": len(high_cardinality_columns),
+                "columns": high_cardinality_columns,
+                "details": high_cardinality_details
+            }
+        },
+        "columns_summary": {
+            "numeric_columns": numeric_columns_summary,
+            "categorical_columns": categorical_columns_summary,
+            "columns_with_high_missing_rate": [
+                {
+                    "column": col.name,
+                    "missing_share": col.missing_share,
+                    "missing_count": col.missing
+                }
+                for col in dataset_summary.columns 
+                if col.missing_share > 0.3
+            ]
+        },
+        "statistics": {
+            "columns_with_missing_values": sum(1 for col in dataset_summary.columns if col.missing > 0),
+            "columns_without_missing_values": sum(1 for col in dataset_summary.columns if col.missing == 0),
+            "columns_with_zero_variance": len(constant_columns),
+            "average_missing_share_per_column": (
+                sum(col.missing_share for col in dataset_summary.columns) / dataset_summary.n_cols 
+                if dataset_summary.n_cols > 0 else 0
+            )
+        }
+    }
 
 
 def flatten_summary_for_print(summary: DatasetSummary) -> pd.DataFrame:
