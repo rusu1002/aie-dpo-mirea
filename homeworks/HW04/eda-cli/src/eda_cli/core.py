@@ -1,0 +1,466 @@
+from __future__ import annotations
+
+from dataclasses import dataclass, asdict
+from pathlib import Path
+from typing import Any, Dict, List, Optional, Sequence
+
+import pandas as pd
+from pandas.api import types as ptypes
+
+
+@dataclass
+class ColumnSummary:
+    name: str
+    dtype: str
+    non_null: int
+    missing: int
+    missing_share: float
+    unique: int
+    example_values: List[Any]
+    is_numeric: bool
+    min: Optional[float] = None
+    max: Optional[float] = None
+    mean: Optional[float] = None
+    std: Optional[float] = None
+
+    def to_dict(self) -> Dict[str, Any]:
+        return asdict(self)
+
+
+@dataclass
+class DatasetSummary:
+    n_rows: int
+    n_cols: int
+    columns: List[ColumnSummary]
+
+    def to_dict(self) -> Dict[str, Any]:
+        return {
+            "n_rows": self.n_rows,
+            "n_cols": self.n_cols,
+            "columns": [c.to_dict() for c in self.columns],
+        }
+
+
+def summarize_dataset(
+    df: pd.DataFrame,
+    example_values_per_column: int = 3,
+) -> DatasetSummary:
+    """
+    Полный обзор датасета по колонкам:
+    - количество строк/столбцов;
+    - типы;
+    - пропуски;
+    - количество уникальных;
+    - несколько примерных значений;
+    - базовые числовые статистики (для numeric).
+    """
+    n_rows, n_cols = df.shape
+    columns: List[ColumnSummary] = []
+
+    for name in df.columns:
+        s = df[name]
+        dtype_str = str(s.dtype)
+
+        non_null = int(s.notna().sum())
+        missing = n_rows - non_null
+        missing_share = float(missing / n_rows) if n_rows > 0 else 0.0
+        unique = int(s.nunique(dropna=True))
+
+        # Примерные значения выводим как строки
+        examples = (
+            s.dropna().astype(str).unique()[:example_values_per_column].tolist()
+            if non_null > 0
+            else []
+        )
+
+        is_numeric = bool(ptypes.is_numeric_dtype(s))
+        min_val: Optional[float] = None
+        max_val: Optional[float] = None
+        mean_val: Optional[float] = None
+        std_val: Optional[float] = None
+
+        if is_numeric and non_null > 0:
+            min_val = float(s.min())
+            max_val = float(s.max())
+            mean_val = float(s.mean())
+            std_val = float(s.std())
+
+        columns.append(
+            ColumnSummary(
+                name=name,
+                dtype=dtype_str,
+                non_null=non_null,
+                missing=missing,
+                missing_share=missing_share,
+                unique=unique,
+                example_values=examples,
+                is_numeric=is_numeric,
+                min=min_val,
+                max=max_val,
+                mean=mean_val,
+                std=std_val,
+            )
+        )
+
+    return DatasetSummary(n_rows=n_rows, n_cols=n_cols, columns=columns)
+
+
+def missing_table(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Таблица пропусков по колонкам: count/share.
+    """
+    if df.empty:
+        return pd.DataFrame(columns=["missing_count", "missing_share"])
+
+    total = df.isna().sum()
+    share = total / len(df)
+    result = (
+        pd.DataFrame(
+            {
+                "missing_count": total,
+                "missing_share": share,
+            }
+        )
+        .sort_values("missing_share", ascending=False)
+    )
+    return result
+
+
+def correlation_matrix(df: pd.DataFrame) -> pd.DataFrame:
+    """
+    Корреляция Пирсона для числовых колонок.
+    """
+    numeric_df = df.select_dtypes(include="number")
+    if numeric_df.empty:
+        return pd.DataFrame()
+    return numeric_df.corr(numeric_only=True)
+
+
+def top_categories(
+    df: pd.DataFrame,
+    max_columns: int = 5,
+    top_k: int = 5,
+) -> Dict[str, pd.DataFrame]:
+    """
+    Для категориальных/строковых колонок считает top-k значений.
+    Возвращает словарь: колонка -> DataFrame со столбцами value/count/share.
+    """
+    result: Dict[str, pd.DataFrame] = {}
+    candidate_cols: List[str] = []
+
+    for name in df.columns:
+        s = df[name]
+        if ptypes.is_object_dtype(s) or isinstance(s.dtype, pd.CategoricalDtype):
+            candidate_cols.append(name)
+
+    for name in candidate_cols[:max_columns]:
+        s = df[name]
+        vc = s.value_counts(dropna=True).head(top_k)
+        if vc.empty:
+            continue
+        share = vc / vc.sum()
+        table = pd.DataFrame(
+            {
+                "value": vc.index.astype(str),
+                "count": vc.values,
+                "share": share.values,
+            }
+        )
+        result[name] = table
+
+    return result
+
+
+def compute_quality_flags(summary: DatasetSummary, missing_df: pd.DataFrame) -> Dict[str, Any]:
+    """
+    Простейшие эвристики «качества» данных:
+    - слишком много пропусков;
+    - подозрительно мало строк;
+    и т.п.
+    """
+    flags: Dict[str, Any] = {}
+    flags["too_few_rows"] = summary.n_rows < 100
+    flags["too_many_columns"] = summary.n_cols > 100
+
+    max_missing_share = float(missing_df["missing_share"].max()) if not missing_df.empty else 0.0
+    flags["max_missing_share"] = max_missing_share
+    flags["too_many_missing"] = max_missing_share > 0.5
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+    # Проверка на константные колонки
+    flags["has_constant_columns"] = False
+    constant_columns = []
+
+    for col_summary in summary.columns:
+        if col_summary.unique == 1 and col_summary.missing == 0:
+            flags["has_constant_columns"] = True
+            constant_columns.append(col_summary.name)
+        elif col_summary.unique == 0:
+            flags["has_constant_columns"] = True
+            constant_columns.append(col_summary.name)
+    
+    flags["constant_columns"] = constant_columns
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+    # Проверка на высокую кардинальность категориальных признаков
+    flags["has_high_cardinality_categoricals"] = False
+    high_cardinality_categoricals_columns = []
+
+    for col_summary in summary.columns:
+        is_categorical = (
+            "object" in col_summary.dtype.lower() or
+            "string" in col_summary.dtype.lower() or
+            "category" in col_summary.dtype.lower() or
+            (not col_summary.is_numeric and col_summary.unique > 0)
+        )
+        
+        if is_categorical and summary.n_rows > 0:
+            # Доля уникальных значений от общего числа строк должна быть меньше 50%
+            unique_share = col_summary.unique / summary.n_rows
+            if unique_share > 0.5:
+                flags["has_high_cardinality_categoricals"] = True
+                high_cardinality_categoricals_columns.append(col_summary.name)
+    
+    flags["high_cardinality_categoricals_columns"] = high_cardinality_categoricals_columns
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+    # Проверка ID-колонок на дубликаты
+    id_columns = []
+    for col_summary in summary.columns:
+        col_name = col_summary.name.lower()
+        
+        is_id = any(id_term in col_name for id_term in 
+                             ['id', 'key', 'code', 'номер', 'number'])
+        if is_id:
+            id_columns.append(col_summary.name)
+    
+    flags["has_suspicious_id_duplicates"] = False
+    for id_col in id_columns:
+        for col_summary in summary.columns:
+            if col_summary.name == id_col:
+                # Дубликаты есть, если unique < n_rows (если бы не было пропусков)
+                unique_if_no_duplicates = col_summary.non_null
+                if col_summary.unique < unique_if_no_duplicates:
+                    # duplicate_count = unique_if_no_duplicates - col_summary.unique
+                    flags["has_suspicious_id_duplicates"] = True
+                break
+
+# -----------------------------------------------------------------------------------------------------------------------------------------------
+    score = 1.0
+    penalties = 0.0
+    
+    # Штраф за пропуски
+    score -= max_missing_share
+    
+    # Штрафы за количество строк и колонок
+    if flags["too_few_rows"]:
+        penalties += 0.2
+    if flags["too_many_columns"]:
+        penalties += 0.1
+    
+    # Штраф за константные колонки
+    if flags["has_constant_columns"]:
+        penalties += 0.1 * min(len(flags["constant_columns"]) / summary.n_cols, 1.0)
+    
+    # Штраф за кардинальность
+    if flags["has_high_cardinality_categoricals"]:
+        penalties += 0.1 * min(len(flags["high_cardinality_categoricals_columns"]) / summary.n_cols, 1.0)
+    
+    # Штраф за дубликаты id
+    if flags["has_suspicious_id_duplicates"]:
+        penalties += 0.1
+    
+    score -= penalties
+    score = max(0.0, min(1.0, score))
+    
+    flags["quality_score"] = round(score, 4)
+
+    # # Простейший «скор» качества
+    # score = 1.0
+    # score -= max_missing_share  # чем больше пропусков, тем хуже
+    # if summary.n_rows < 100:
+    #     score -= 0.2
+    # if summary.n_cols > 100:
+    #     score -= 0.1
+
+    # score = max(0.0, min(1.0, score))
+    # flags["quality_score"] = score
+
+    return flags
+
+
+# Функция для создания JSON-сводки
+def create_json_summary(
+    dataset_summary: DatasetSummary,
+    quality_flags: Dict[str, Any],
+    problematic_missing_cols: List[str],
+    missing_df: pd.DataFrame,
+    title: str,
+    min_missing_share: float,
+    path: str
+) -> Dict[str, Any]:
+    """
+    Создает компактную JSON-сводку для EDA отчета на основе DatasetSummary.
+    """
+    # Считаем количество колонок по типам
+    n_numeric = sum(1 for col in dataset_summary.columns if col.is_numeric)
+    n_categorical = sum(1 for col in dataset_summary.columns if not col.is_numeric)
+    
+    # Извлекаем списки колонок по разным критериям
+    constant_columns = quality_flags.get('constant_columns', [])
+    high_cardinality_columns = quality_flags.get('high_cardinality_categoricals_columns', [])
+    
+    # Получаем информацию о пропусках для проблемных колонок
+    problematic_missing_details = []
+    for col in problematic_missing_cols:
+        # Находим соответствующую колонку в DatasetSummary
+        col_summary = next((c for c in dataset_summary.columns if c.name == col), None)
+        if col_summary:
+            problematic_missing_details.append({
+                "column": col,
+                "missing_count": col_summary.missing,
+                "missing_share": col_summary.missing_share,
+                "non_null_count": col_summary.non_null
+            })
+    
+    # Собираем информацию о колонках с высоким количеством уникальных значений
+    high_cardinality_details = []
+    for col_name in high_cardinality_columns:
+        col_summary = next((c for c in dataset_summary.columns if c.name == col_name), None)
+        if col_summary:
+            high_cardinality_details.append({
+                "column": col_name,
+                "unique_count": col_summary.unique,
+                "dtype": col_summary.dtype
+            })
+    
+    # Собираем информацию о константных колонках
+    constant_columns_details = []
+    for col_name in constant_columns:
+        col_summary = next((c for c in dataset_summary.columns if c.name == col_name), None)
+        if col_summary:
+            constant_columns_details.append({
+                "column": col_name,
+                "unique_count": col_summary.unique,
+                "dtype": col_summary.dtype,
+                "example_values": col_summary.example_values
+            })
+    
+    # Создаем сводку по числовым колонкам
+    numeric_columns_summary = []
+    for col in dataset_summary.columns:
+        if col.is_numeric:
+            numeric_columns_summary.append({
+                "column": col.name,
+                "min": col.min,
+                "max": col.max,
+                "mean": col.mean,
+                "std": col.std,
+                "missing_share": col.missing_share
+            })
+    
+    # Создаем сводку по категориальным колонкам
+    categorical_columns_summary = []
+    for col in dataset_summary.columns:
+        if not col.is_numeric:
+            categorical_columns_summary.append({
+                "column": col.name,
+                "unique_count": col.unique,
+                "missing_share": col.missing_share,
+                "dtype": col.dtype
+            })
+    
+    # Собираем полную JSON-сводку
+    return {
+        "report_metadata": {
+            "title": title,
+            "source_file": Path(path).name,
+            "source_path": str(Path(path).resolve()),
+            "min_missing_share_threshold": min_missing_share
+        },
+        "dataset_overview": {
+            "n_rows": dataset_summary.n_rows,
+            "n_columns": dataset_summary.n_cols,
+            "n_numeric_columns": n_numeric,
+            "n_categorical_columns": n_categorical,
+            "total_missing_values": sum(col.missing for col in dataset_summary.columns),
+            "total_missing_share": sum(col.missing for col in dataset_summary.columns) / 
+                                  (dataset_summary.n_rows * dataset_summary.n_cols) 
+                                  if dataset_summary.n_rows * dataset_summary.n_cols > 0 else 0
+        },
+        "quality_assessment": {
+            "quality_score": quality_flags.get('quality_score', 0.0),
+            "max_missing_share": quality_flags.get('max_missing_share', 0.0),
+            "issues": {
+                "too_few_rows": quality_flags.get('too_few_rows', False),
+                "too_many_columns": quality_flags.get('too_many_columns', False),
+                "too_many_missing": quality_flags.get('too_many_missing', False),
+                "has_constant_columns": quality_flags.get('has_constant_columns', False),
+                "has_high_cardinality_categoricals": quality_flags.get('has_high_cardinality_categoricals', False),
+                "has_suspicious_id_duplicates": quality_flags.get('has_suspicious_id_duplicates', False)
+            }
+        },
+        "problematic_columns": {
+            "by_missing_threshold": {
+                "count": len(problematic_missing_cols),
+                "columns": problematic_missing_cols,
+                "details": problematic_missing_details
+            },
+            "constant_columns": {
+                "count": len(constant_columns),
+                "columns": constant_columns,
+                "details": constant_columns_details
+            },
+            "high_cardinality_columns": {
+                "count": len(high_cardinality_columns),
+                "columns": high_cardinality_columns,
+                "details": high_cardinality_details
+            }
+        },
+        "columns_summary": {
+            "numeric_columns": numeric_columns_summary,
+            "categorical_columns": categorical_columns_summary,
+            "columns_with_high_missing_rate": [
+                {
+                    "column": col.name,
+                    "missing_share": col.missing_share,
+                    "missing_count": col.missing
+                }
+                for col in dataset_summary.columns 
+                if col.missing_share > 0.3
+            ]
+        },
+        "statistics": {
+            "columns_with_missing_values": sum(1 for col in dataset_summary.columns if col.missing > 0),
+            "columns_without_missing_values": sum(1 for col in dataset_summary.columns if col.missing == 0),
+            "columns_with_zero_variance": len(constant_columns),
+            "average_missing_share_per_column": (
+                sum(col.missing_share for col in dataset_summary.columns) / dataset_summary.n_cols 
+                if dataset_summary.n_cols > 0 else 0
+            )
+        }
+    }
+
+
+def flatten_summary_for_print(summary: DatasetSummary) -> pd.DataFrame:
+    """
+    Превращает DatasetSummary в табличку для более удобного вывода.
+    """
+    rows: List[Dict[str, Any]] = []
+    for col in summary.columns:
+        rows.append(
+            {
+                "name": col.name,
+                "dtype": col.dtype,
+                "non_null": col.non_null,
+                "missing": col.missing,
+                "missing_share": col.missing_share,
+                "unique": col.unique,
+                "is_numeric": col.is_numeric,
+                "min": col.min,
+                "max": col.max,
+                "mean": col.mean,
+                "std": col.std,
+            }
+        )
+    return pd.DataFrame(rows)
