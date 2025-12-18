@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from time import perf_counter
+from typing import Any
 
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, UploadFile
@@ -78,6 +79,24 @@ class QualityResponse(BaseModel):
     )
 
 
+class QualityFlagsResponse(BaseModel):
+    """Ответ с полным набором флагов качества."""
+
+    flags: dict[str, Any] = Field(
+        ...,
+        description="Полный набор флагов качества с подробной информацией",
+    )
+    latency_ms: float = Field(
+        ...,
+        ge=0.0,
+        description="Время обработки запроса на сервере, миллисекунды",
+    )
+    dataset_shape: dict[str, int] = Field(
+        ...,
+        description="Размеры датасета: {'n_rows': ..., 'n_cols': ...}",
+    )
+
+
 # ---------- Системный эндпоинт ----------
 
 
@@ -97,7 +116,7 @@ def health() -> dict[str, str]:
 @app.post("/quality", response_model=QualityResponse, tags=["quality"])
 def quality(req: QualityRequest) -> QualityResponse:
     """
-    Эндпоинт-заглушка, который принимает агрегированные признаки датасета
+    Эндпоинт, который принимает агрегированные признаки датасета
     и возвращает эвристическую оценку качества.
     """
 
@@ -240,5 +259,94 @@ async def quality_from_csv(file: UploadFile = File(...)) -> QualityResponse:
         message=message,
         latency_ms=latency_ms,
         flags=flags_bool,
+        dataset_shape={"n_rows": n_rows, "n_cols": n_cols},
+    )
+
+
+@app.post(
+    "/quality-flags-from-csv",
+    response_model=QualityFlagsResponse,
+    tags=["quality"],
+    summary="Полный набор флагов качества по CSV-файлу",
+)
+async def quality_flags_from_csv(file: UploadFile = File(...)) -> QualityFlagsResponse:
+    """
+    Эндпоинт, который принимает CSV-файл, запускает EDA-ядро
+    (summarize_dataset + missing_table + compute_quality_flags)
+    и возвращает полный набор флагов качества со всеми деталями.
+
+    В отличие от /quality-from-csv, возвращает все флаги, включая дополнительные
+    детали (например, список константных колонок и колонок с высокой кардинальностью).
+    """
+    
+    start = perf_counter()
+
+    if file.content_type not in ("text/csv", "application/vnd.ms-excel", "application/octet-stream"):
+        raise HTTPException(status_code=400, detail="Ожидается CSV-файл (content-type text/csv).")
+
+    try:
+        df = pd.read_csv(file.file)
+    except Exception as exc:  # noqa: BLE001
+        raise HTTPException(status_code=400, detail=f"Не удалось прочитать CSV: {exc}")
+
+    if df.empty:
+        raise HTTPException(status_code=400, detail="CSV-файл не содержит данных (пустой DataFrame).")
+
+    # Используем EDA-ядро
+    summary = summarize_dataset(df)
+    missing_df = missing_table(df)
+    flags_all = compute_quality_flags(summary, missing_df)
+
+    latency_ms = (perf_counter() - start) * 1000.0
+
+    # Получаем размеры датасета
+    try:
+        n_rows = int(getattr(summary, "n_rows", df.shape[0]))
+        n_cols = int(getattr(summary, "n_cols", df.shape[1]))
+    except AttributeError:
+        n_rows = int(df.shape[0])
+        n_cols = int(df.shape[1])
+
+    # Формируем структурированный ответ с флагами
+    # Включаем все флаги, которые вернула функция compute_quality_flags
+    structured_flags: dict[str, Any] = {}
+
+    # Основные булевы флаги
+    for key, value in flags_all.items():
+        if isinstance(value, bool):
+            structured_flags[key] = value
+        elif key == "quality_score":
+            structured_flags[key] = float(value)
+        elif key in ["constant_columns", "high_cardinality_categoricals_columns"] and isinstance(value, list):
+            # Добавляем списки колонок только если соответствующий флаг True
+            if key == "constant_columns" and flags_all.get("has_constant_columns", False):
+                structured_flags[key] = value
+            elif key == "high_cardinality_categoricals_columns" and flags_all.get("has_high_cardinality_categoricals", False):
+                structured_flags[key] = value
+
+    # Гарантируем наличие всех ожидаемых флагов
+    expected_flags = {
+        "too_few_rows": False,
+        "too_many_columns": False,
+        "too_many_missing": False,
+        "has_constant_columns": False,
+        "has_high_cardinality_categoricals": False,
+        "has_suspicious_id_duplicates": False,
+        "quality_score": 0.0
+    }
+
+    for flag_name, default_value in expected_flags.items():
+        if flag_name not in structured_flags:
+            structured_flags[flag_name] = default_value
+
+    print(
+        f"[quality-flags-from-csv] filename={file.filename!r} "
+        f"n_rows={n_rows} n_cols={n_cols} "
+        f"latency_ms={latency_ms:.1f} ms"
+    )
+
+    return QualityFlagsResponse(
+        flags=structured_flags,
+        latency_ms=latency_ms,
         dataset_shape={"n_rows": n_rows, "n_cols": n_cols},
     )
