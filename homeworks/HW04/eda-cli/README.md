@@ -290,14 +290,14 @@ curl -X POST "http://127.0.0.1:8000/quality-flags-from-csv" \
 
 Ответ будет содержать:
 
-- `flags` - булевы флаги из `compute_quality_flags` (
+- `flags` - булевы флаги из `compute_quality_flags` {
     - `too_few_rows` - слишком мало строк;
     - `too_many_columns` - слишком много колонок;
     - `too_many_missing` - много пропущенных значений;
     - `has_constant_columns` - имеются константные колонки (если =true: `constant_columns` - список константных колонок);
     - `has_high_cardinality_categoricals` - имеются кардинальные категориальные колонки (если =true: `high_cardinality_categoricals_columns` - список кардинальных категориальных колонок);
     - `has_suspicious_id_duplicates` - имеются дубликаты id;
-    - `quality_score` - интегральный скор качества);
+    - `quality_score` - интегральный скор качества};
 - `dataset_shape` - реальные размеры датасета (`n_rows`, `n_cols`);
 - `latency_ms` - время обработки запроса.
 

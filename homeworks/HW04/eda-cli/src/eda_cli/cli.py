@@ -209,7 +209,7 @@ def report(
     typer.echo(f"- Основной markdown: {md_path}")
     typer.echo("- Табличные файлы: summary.csv, missing.csv, correlation.csv, top_categories/*.csv")
     typer.echo("- Графики: hist_*.png, missing_matrix.png, correlation_heatmap.png")
-    typer.echo(f"- JSON-сводка: {json_path}")
+    # typer.echo(f"- JSON-сводка: {json_path}")
 
 
 if __name__ == "__main__":

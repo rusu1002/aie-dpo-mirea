@@ -307,24 +307,22 @@ async def quality_flags_from_csv(file: UploadFile = File(...)) -> QualityFlagsRe
         n_rows = int(df.shape[0])
         n_cols = int(df.shape[1])
 
-    # Формируем структурированный ответ с флагами
-    # Включаем все флаги, которые вернула функция compute_quality_flags
+    # Все флаги из compute_quality_flags
     structured_flags: dict[str, Any] = {}
 
-    # Основные булевы флаги
     for key, value in flags_all.items():
         if isinstance(value, bool):
             structured_flags[key] = value
         elif key == "quality_score":
             structured_flags[key] = float(value)
         elif key in ["constant_columns", "high_cardinality_categoricals_columns"] and isinstance(value, list):
-            # Добавляем списки колонок только если соответствующий флаг True
+            # Списки колонок добавляются только при условии соответствующих флагов = true
             if key == "constant_columns" and flags_all.get("has_constant_columns", False):
                 structured_flags[key] = value
             elif key == "high_cardinality_categoricals_columns" and flags_all.get("has_high_cardinality_categoricals", False):
                 structured_flags[key] = value
 
-    # Гарантируем наличие всех ожидаемых флагов
+    # Полный набор флагов
     expected_flags = {
         "too_few_rows": False,
         "too_many_columns": False,
