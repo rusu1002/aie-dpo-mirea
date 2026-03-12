@@ -7,7 +7,7 @@
 
 ## 2. Среда и воспроизводимость
 
-- Python: 3.10
+- Python: 3.10.0
 - torch / torchvision: 2.10.0+cpu / 0.25.0
 - Устройство (CPU/GPU): CPU
 - Seed: 42
