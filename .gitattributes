@@ -6,3 +6,4 @@
 *.bin filter=lfs diff=lfs merge=lfs -text
 *.joblib filter=lfs diff=lfs merge=lfs -text
 homeworks/HW06/artifacts/best_model.joblib filter=lfs diff=lfs merge=lfs -text
+homeworks/HW08-09/artifacts/best_model.pt filter=lfs diff=lfs merge=lfs -text
