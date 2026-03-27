@@ -1,0 +1,7 @@
+experiment_id,task,dataset,seed,model_summary,optimizer,lr,epochs_trained,best_val_accuracy,test_accuracy,precision,recall,mean_iou,notes
+C1,classification,STL10,42,SimpleCNN (620362 params),Adam,0.001,12,0.594,,,,,
+C2,classification,STL10,42,SimpleCNN (620362 params),Adam,0.001,12,0.568,,,,,
+C3,classification,STL10,42,ResNet (5130 params),Adam,0.001,8,0.912,,,,,
+C4,classification,STL10,42,ResNet (5130 params),Adam,"[0.0001, 0.001]",8,0.936,0.91925,,,,
+V1,detection,VOCDetection,42,"fasterrcnn_resnet50_fpn_v2, thr=0.3, iou=0.5",,,,,,0.3846153846005917,0.9090909090082645,0.7937933935059442,
+V2,detection,VOCDetection,42,"fasterrcnn_resnet50_fpn_v2, thr=0.7, iou=0.5",,,,,,0.6666666666111111,0.7272727272066115,0.7845681111017864,
