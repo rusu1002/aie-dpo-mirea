@@ -1,0 +1,22 @@
+{
+    "experiment_id": "R1",
+    "model_name": "GRUForecaster",
+    "task": "forecasting",
+    "dataset": "S12-hw-dataset",
+    "input_size": 1,
+    "hidden_size": 64,
+    "num_layers": 2,
+    "dropout": 0.0,
+    "batch_first": true,
+    "window_size": 28,
+    "input_sequence_length": 28,
+    "target_size": 1,
+    "scaler": "StandardScaler",
+    "seed": 42,
+    "optimizer": "Adam",
+    "learning_rate": 0.0005,
+    "epochs_trained": 30,
+    "batch_size": 64,
+    "loss_function": "MSE",
+    "device": "cpu"
+}
