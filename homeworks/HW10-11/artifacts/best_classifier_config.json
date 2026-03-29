@@ -4,11 +4,8 @@
     "seed": 42,
     "model": "ResNet",
     "optimizer": "Adam",
-    "lr": [
-        0.0001,
-        0.001
-    ],
+    "lr": 0.0001,
     "criterion": "CrossEntropyLoss()",
-    "epochs": 8,
+    "epochs": 3,
     "transforms": "resize+normalize (ImageNet stats)"
 }
