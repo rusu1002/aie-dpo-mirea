@@ -1,0 +1,218 @@
+{
+  "faithfulness": [
+    {
+      "question_id": 0,
+      "question": "Каковы лимиты страховой защиты вкладов против НПФ?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8,
+      "contextual_relevancy": 0.5555555555555556
+    },
+    {
+      "question_id": 75,
+      "question": "Как кредитные каникулы мобилизованного отражаются на созаемщике?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.5454545454545454
+    },
+    {
+      "question_id": 71,
+      "question": "Какие последствия ждут продавца, если новый владелец ездит по его полису ОСАГО?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.5
+    },
+    {
+      "question_id": 70,
+      "question": "В каких случаях действует госстрахование вкладов?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.07692307692307693
+    },
+    {
+      "question_id": 67,
+      "question": "Почему сумма списания по рублевой карте за границей может отличаться от ожидаемой?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.38461538461538464
+    },
+    {
+      "question_id": 65,
+      "question": "Вернут ли деньги за ОСАГО при продаже автомобиля по сравнению со случаем отзыва лицензии у страховщика?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.875,
+      "contextual_relevancy": 0.2
+    },
+    {
+      "question_id": 64,
+      "question": "Какие приемы помогают сократить импульсивные траты?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.8888888888888888
+    },
+    {
+      "question_id": 62,
+      "question": "Когда имеет смысл жаловаться в Банк России по проблеме с финансовой организацией?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.4444444444444444
+    },
+    {
+      "question_id": 61,
+      "question": "Чем грозит просрочка по «нулевому» микрозайму для будущих заявок на кредит?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.5
+    },
+    {
+      "question_id": 60,
+      "question": "Чем отличаются ОСАГО, каско, ДСАГО по выплатам?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.4444444444444444
+    }
+  ],
+  "answer_relevancy": [
+    {
+      "question_id": 50,
+      "question": "Какие ПИФы подходят для краткосрочной стратегии?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.25
+    },
+    {
+      "question_id": 72,
+      "question": "Почему не стоит спешить с микрозаймом?",
+      "faithfulness": 0.8571428571428571,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.45454545454545453
+    },
+    {
+      "question_id": 70,
+      "question": "В каких случаях действует госстрахование вкладов?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.07692307692307693
+    },
+    {
+      "question_id": 69,
+      "question": "Что может покупать неквалифицированный инвестор без тестов с учетом ограничений на иностранные бумаги?",
+      "faithfulness": 0.5,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.4444444444444444
+    },
+    {
+      "question_id": 67,
+      "question": "Почему сумма списания по рублевой карте за границей может отличаться от ожидаемой?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.38461538461538464
+    },
+    {
+      "question_id": 66,
+      "question": "Зачем нужны обновления системы вместе с антивирусом для защиты от фишинга?",
+      "faithfulness": 0.8333333333333334,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.6666666666666666
+    },
+    {
+      "question_id": 64,
+      "question": "Какие приемы помогают сократить импульсивные траты?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.8888888888888888
+    },
+    {
+      "question_id": 63,
+      "question": "Какие ограничения на выдачу наличной валюты действуют для средств на счетах по сравнению с деньгами в банковской ячейке?",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.7272727272727273
+    },
+    {
+      "question_id": 62,
+      "question": "Когда имеет смысл жаловаться в Банк России по проблеме с финансовой организацией?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.4444444444444444
+    },
+    {
+      "question_id": 61,
+      "question": "Чем грозит просрочка по «нулевому» микрозайму для будущих заявок на кредит?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.5
+    }
+  ],
+  "contextual_relevancy": [
+    {
+      "question_id": 41,
+      "question": "Что происходит дальше, если должник отказывается от общения с коллекторами?",
+      "faithfulness": 0.6,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 11,
+      "question": "В каких случаях банк вправе приостанавливать операции бизнеса?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 34,
+      "question": "По каким признакам распознать фишинговый сайт или письмо?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 98,
+      "question": "Как подготовиться к ежегодным тратам без стресса?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 4,
+      "question": "Как распознать фишинговое письмо?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 28,
+      "question": "Что мешает оплате картой в России, если SWIFT не помеха?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 21,
+      "question": "Как повысить шансы на одобрение кредита без переплаты за ненужные услуги?",
+      "faithfulness": 0.9,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 95,
+      "question": "Куда обращаться за выплатами: советские вклады против вкладов банка с отозванной лицензией?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 89,
+      "question": "Зачем перед вводом личных данных проверять подлинность сайта, а также источник установки приложения?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 15,
+      "question": "Как проверить подлинность полиса ОСАГО перед покупкой?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    }
+  ]
+}

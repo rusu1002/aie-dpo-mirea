@@ -1,41 +1,46 @@
-# project/src/llm/generator.py
 import requests
 import json
 import numpy as np
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re
 
-from src.generation.manager import model_manager
-from src.utils.config import settings
+from src.generation.llm_manager import llm_manager
+from configs.config import settings
 from src.utils.logger import logger
+from src.utils.metrics import LLM_USAGE
 
-
-OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 def generate_answer(question: str, context: str) -> str:
     """
-    Генерирует ответ, выбирая между API и fallback на основе доступности моделей
+    Выбор доступной модели LLM или аварийного fallback
     """
-    if model_manager.is_llm_available():
-        logger.info("LLM models available, using API generation")
-        return generate_answer_api(question, context)
-    else:
-        logger.info("No LLM models available, using fallback generation")
-        return generate_answer_from_context(question, context)
+    llms = llm_manager.get_llms()
+
+    for llm in llms:
+        try:
+            answer = generate_answer_api(question, context, llm)
+
+            LLM_USAGE.labels(model=llm).inc()
+            
+            return answer
+
+        except Exception as e:
+            logger.error(f"LLM {llm} failed: {e}")
+
+    logger.warning("No LLM models available, using fallback generation from context")
+    return generate_answer_from_context(question, context)
 
 
-def generate_answer_api(question: str, context: str) -> str:
-    logger.info("Generating answer via OpenRouter...")
-
-    current_model = model_manager.get_active_model()
-    logger.info(f"Using model: {current_model}")
+def generate_answer_api(question: str, context: str, model: str) -> str:
+    # current_model = llm_manager.get_active_model()
+    logger.info(f"Generating answer with OpenRouter API LLM: {model}")
 
     messages = [
         {
             "role": "system",
             "content": (
                 "Ты финансовый AI-ассистент. "
-                "Отвечай подробно и структурированно, но не переписывай весь контекст. Пиши ответ в разговорном уважительном стиле. Если точного ответа на вопрос нет, скажи: 'К сожалению, я не могу ответить на ваш вопрос'. Нельзя использовать markdown. Нельзя упоминать контекст, данный текст, предоставленные данные."
+                "Отвечай подробно и структурированно, но не переписывай весь контекст. Ответь максимум 10 предложениями. Пиши ответ в разговорном уважительном стиле. Если точного ответа на вопрос нет, скажи: 'К сожалению, я не могу ответить на ваш вопрос'. НЕЛЬЗЯ использовать markdown, НИКАКИХ спецсимволов, только текст. Нельзя упоминать контекст, данный текст, предоставленные данные."
             )
         },
         {
@@ -50,7 +55,7 @@ def generate_answer_api(question: str, context: str) -> str:
         }
     ]
     response = requests.post(
-        OPENROUTER_URL,
+        settings.OPENROUTER_URL,
         headers={
             "Authorization": f"Bearer {settings.LLM_API_KEY}",
             "Content-Type": "application/json"
@@ -58,7 +63,7 @@ def generate_answer_api(question: str, context: str) -> str:
             # "X-Title": "RAG Project"
         },
         data=json.dumps({
-            "model": current_model,
+            "model": model,
             "messages": messages,
             "temperature": 0.5,
             "max_tokens": 512
@@ -69,7 +74,7 @@ def generate_answer_api(question: str, context: str) -> str:
     response.raise_for_status()
     result = response.json()
 
-    logger.info(f"Full API response: {json.dumps(result, ensure_ascii=False)[:500]}")
+    # logger.info(f"Full API response: {json.dumps(result, ensure_ascii=False)[:500]}")
     
     if "choices" not in result:
         logger.error(f"Unexpected response structure: {result.keys()}")
@@ -100,23 +105,20 @@ def generate_answer_api(question: str, context: str) -> str:
 
 
 def split_into_sentences(text: str) -> list:
-    """Разбивает текст на предложения"""
-    # Простое разбиение по .!?
+    """Разделение текста на предложения"""
     sentences = re.split(r'[.!?]+', text)
-    # Очищаем и фильтруем пустые предложения
     sentences = [s.strip() for s in sentences if s.strip()]
     return sentences
 
 def generate_answer_from_context(query: str, context: str, max_sentences: int = 2) -> str:
     """
-    Генерирует ответ, выбирая наиболее релевантные предложения из контекста.
+    Генерация ответа выбором наиболее релевантных предложений из контекста.
     Используется как fallback, когда API модели недоступен.
     """
-    logger.info("Using fallback: generating answer from context without LLM")
+    # logger.info("Using fallback: generating answer from context without LLM")
     
-    # Убираем технические строки источников из ранжирования, но не из общего контекста.
     raw_lines = [line.strip() for line in context.splitlines() if line.strip()]
-    content_lines = [line for line in raw_lines if not line.startswith("[Источник:")]
+    content_lines = [line for line in raw_lines]
 
     sentence_pool = []
     for line in content_lines:
@@ -164,4 +166,4 @@ def generate_answer_from_context(query: str, context: str, max_sentences: int = 
     except Exception as e:
         logger.error(f"Error in fallback generation: {e}")
         # Если что-то пошло не так, возвращаем первые несколько предложений
-        return " ".join(sentence_pool[:max_sentences]) if sentence_pool else "Не удалось сформировать ответ из контекста."
+        return "Не удалось сформировать ответ из контекста."

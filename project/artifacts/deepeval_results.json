@@ -1,0 +1,1602 @@
+[
+  {
+    "question_id": 0,
+    "question": "Каковы лимиты страховой защиты вкладов против НПФ?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the given information."
+    },
+    "answer_relevancy": {
+      "score": 0.8,
+      "reason": "The score is 0.80 because the answer is relevant, but it could be improved by providing more context about the insurance coverage for deposits against NPF, as the irrelevant statement suggests a potential misunderstanding of the topic."
+    },
+    "contextual_relevancy": {
+      "score": 0.5555555555555556,
+      "reason": "The score is 0.56 because the context provides some relevant information about insurance protection limits, but the statements are not directly addressing the specific limits against NPF. The context mentions a limit of 2.8 million rubles, but further clarification is needed to ensure it applies to the requested context."
+    }
+  },
+  {
+    "question_id": 1,
+    "question": "Какие действия нужны, чтобы получить выплату после ДТП по европротоколу, включая необходимые доказательства?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, and no further improvements are needed."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear, concise response to the question. It outlines the necessary steps and evidence required for a successful claim, ensuring a comprehensive and helpful guide for the user."
+    },
+    "contextual_relevancy": {
+      "score": 0.3076923076923077,
+      "reason": "The score is 0.31 because the context provides some relevant information about the process of submitting documents for a car accident claim, but it does not offer a clear and comprehensive list of actions required to receive a payout after a no-fault accident following the European Accident Statement protocol. While it mentions the 'European Accident Statement protocol' and 'submitting documents', it does not detail the specific actions needed for the payout."
+    }
+  },
+  {
+    "question_id": 2,
+    "question": "Какие приемы помогут сократить импульсные покупки?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, which is fantastic!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a list of techniques to reduce impulsive purchases. No irrelevant information is included."
+    },
+    "contextual_relevancy": {
+      "score": 0.875,
+      "reason": "The score is 0.88 because the context provides relevant strategies to reduce impulsive purchases, such as being aware of retail tricks and managing expenses, but it could be more tailored to the specific question."
+    }
+  },
+  {
+    "question_id": 3,
+    "question": "Какой налог можно платить со сдачи жилья вместо НДФЛ, чем его ставки отличаются от подоходного налога?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, which is fantastic!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is comprehensive and provides a clear explanation of the tax options for renting out property, including the differences in rates compared to income tax."
+    },
+    "contextual_relevancy": {
+      "score": 0.0,
+      "reason": "The score is 0.00 because the retrieval context does not provide any relevant information about alternative taxes to НДФЛ for renting out property. The reasons for irrelevancy clearly state that the context lacks any mention of specific taxes or tax rates, and does not address the core question about tax alternatives for rental income."
+    }
+  },
+  {
+    "question_id": 4,
+    "question": "Как распознать фишинговое письмо?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output is perfectly aligned with the retrieval context, and there are no contradictions to report!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and provides a clear explanation of how to recognize a phishing email, which is exactly what the user requested."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the provided statements are all relevant to the input question, offering a comprehensive guide to identifying phishing emails. Well done!"
+    }
+  },
+  {
+    "question_id": 5,
+    "question": "Почему высокий индивидуальный кредитный рейтинг не гарантирует одобрение кредита?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the retrieval context! Great work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the input is a question about credit ratings and loan approvals, and the output provides a clear and concise explanation without any irrelevant details. Well done!"
+    },
+    "contextual_relevancy": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because while the context provides some relevant statements, such as 'Как правило, при оценке заемщиков кредиторы рассматривают больше факторов, чем в рейтингах БКИ...', it does not directly answer the question. The reasons for irrelevancy highlight this issue, stating that the context 'does not provide any information on why a high individual credit rating does not guarantee loan approval'."
+    }
+  },
+  {
+    "question_id": 6,
+    "question": "Почему низкая ставка по кредиту не гарантирует выгоду при покупке квартиры либо оборудования?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the retrieval context. Keep up the good work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear explanation without any irrelevant details. It addresses the question directly and concisely, offering a comprehensive understanding of the topic."
+    },
+    "contextual_relevancy": {
+      "score": 0.8461538461538461,
+      "reason": "The score is 0.85 because while the context provides some relevant information about low credit rates and their potential drawbacks, it does not explicitly answer the question. The statements mention specific scenarios and conditions related to low credit rates, but they do not directly address why these rates might not guarantee a beneficial purchase."
+    }
+  },
+  {
+    "question_id": 7,
+    "question": "На какой срок разумно вкладываться в драгоценные металлы для сохранения сбережений, чтобы вписать это в финансовый план?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is directly relevant to the question, providing a clear and concise response without any irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.38461538461538464,
+      "reason": "The score is 0.38 because the context provides some relevant statements about long-term investment strategies for precious metals, but it lacks a clear and consistent time frame suggestion, making it partially relevant to the input query."
+    }
+  },
+  {
+    "question_id": 8,
+    "question": "Как учитываются вклад с кредитом в одном банке при санации либо при отзыве лицензии?",
+    "faithfulness": {
+      "score": 0.6,
+      "reason": "The score is 0.60 because there are inconsistencies regarding the timing of insurance payouts and the process of settling loans. The actual output suggests that the insurance payout is dependent on loan repayment, but legal regulations complicate this process."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear explanation of the process, with no irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.36363636363636365,
+      "reason": "The score is 0.36 because the statements provide some relevant information about the treatment of deposits with credit during bank rehabilitation or license revocation, but they do not offer a comprehensive answer to the question. The statements mention specific scenarios and calculations, but a more detailed explanation is needed to fully address the input query."
+    }
+  },
+  {
+    "question_id": 9,
+    "question": "Когда кредитор сможет продать залог: автомобиль в автоломбарде против ипотечной квартиры?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output perfectly aligns with the retrieval context, and there are no contradictions to report. Keep up the good work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is comprehensive and directly addresses the question. It provides a clear and concise explanation of the legal process and differences between the two types of collateral, ensuring a thorough understanding of the topic."
+    },
+    "contextual_relevancy": {
+      "score": 0.125,
+      "reason": "The score is 0.12 because the context provides little information about the timing of selling pledged assets, focusing instead on consequences and legal ownership."
+    }
+  },
+  {
+    "question_id": 10,
+    "question": "Как инвестору распорядиться замороженными паями ПИФов в 2024 году?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is comprehensive and directly addresses the question, providing clear and actionable advice for investors with frozen mutual fund shares in 2024."
+    },
+    "contextual_relevancy": {
+      "score": 0.8,
+      "reason": "The score is 0.80 because while the context provides relevant information about the unfreezing mechanism for investment fund shares, it does not offer specific guidance on how investors should manage their frozen fund shares in 2024. The context focuses more on the options available to fund managers and the overall process."
+    }
+  },
+  {
+    "question_id": 11,
+    "question": "В каких случаях банк вправе приостанавливать операции бизнеса?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, which is fantastic!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is directly relevant to the question, providing a clear and concise explanation of the bank's rights to suspend business operations in certain circumstances."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because all the statements in the retrieval context are relevant to the input, providing clear and concise information about the reasons for a bank to suspend business operations. Well done!"
+    }
+  },
+  {
+    "question_id": 12,
+    "question": "Как оспорить кредит, оформленный мошенниками на мое имя?",
+    "faithfulness": {
+      "score": 0.75,
+      "reason": "The score is 0.75 because while the response provides a general overview of the debt resolution process, it omits specific details mentioned in the contradictions, such as the return of funds, time frames for actions, and the exact terminology used for debt removal."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the model provided a clear and concise response without any irrelevant information, addressing the user's question directly."
+    },
+    "contextual_relevancy": {
+      "score": 0.6363636363636364,
+      "reason": "The score is 0.64 because while the retrieval context provides some relevant steps to take, such as contacting the financial company and filing a police report, it lacks a comprehensive and direct solution to dispute the fraudulent credit. The statements are more general and do not offer a clear procedure to resolve the issue."
+    }
+  },
+  {
+    "question_id": 13,
+    "question": "Почему досрочный платеж по кредиту лучше вносить в дату планового платежа?",
+    "faithfulness": {
+      "score": 0.8,
+      "reason": "The score is 0.80 because the actual output contains a misleading statement about early payments and their impact on principal amounts, which could confuse readers."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant to the question, providing a clear and concise explanation of the benefits of making an early payment on a loan on the scheduled payment date. It covers all relevant points without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because the retrieval context does not provide a clear and direct answer to the question. While it mentions some relevant points about early loan payments, it does not explicitly state why making an early payment on the scheduled date is better, as indicated by the reasons for irrelevancy."
+    }
+  },
+  {
+    "question_id": 14,
+    "question": "Что делать при СМС о блокировке банковской карты?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions to report! The output is perfectly aligned with the retrieval context, and no further improvements are needed."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the response is clear and concise, providing a direct solution to the issue raised in the input. It offers a helpful and relevant answer without any unnecessary details or irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.75,
+      "reason": "The score is 0.75 because the context provides relevant information about SMS card blocking scams and what to do in such situations, but it does not offer a clear step-by-step guide or specific instructions, which could be more helpful for the user."
+    }
+  },
+  {
+    "question_id": 15,
+    "question": "Как проверить подлинность полиса ОСАГО перед покупкой?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear and concise response to the question. It offers a comprehensive solution to verify the authenticity of the OSAGO policy before purchase, ensuring a helpful and informative experience for the user."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because all the statements in the retrieval context are relevant to the input. Great job!"
+    }
+  },
+  {
+    "question_id": 16,
+    "question": "Где получить выписку о состоянии пенсионных накоплений?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the information provided, and no further improvements are needed. Keep up the great work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the user's request, providing a clear and helpful response."
+    },
+    "contextual_relevancy": {
+      "score": 0.4444444444444444,
+      "reason": "The score is 0.44 because the retrieval context provides some relevant information about obtaining a statement of pension savings, but the statements do not directly answer the question of where to get the statement. For instance, the relevant statements mention 'ordering a statement from the Social Fund's website or the 'Gosuslugi' portal' and 'checking the pension savings at the Social Fund's branch', but they do not explicitly state the location for obtaining the requested document."
+    }
+  },
+  {
+    "question_id": 17,
+    "question": "Зачем частному клиенту следить за рейтингом страховщика на фоне возможной приостановки лицензии?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output perfectly aligns with the retrieval context, and there are no contradictions to report! Great job!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and relevant explanation. No improvements are needed!"
+    },
+    "contextual_relevancy": {
+      "score": 0.0,
+      "reason": "The score is 0.00 because the provided statements do not address the 'why' aspect of the question and are not relevant to the input. They describe the actions and consequences of license suspension, but fail to explain why private clients should monitor the insurer's rating."
+    }
+  },
+  {
+    "question_id": 18,
+    "question": "Какие документы подойдут для подтверждения дохода при заявке на кредит?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, which is fantastic!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear and concise response to the question. It directly addresses the requested information without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.9230769230769231,
+      "reason": "The score is 0.92 because the retrieval context provides a comprehensive list of relevant documents for income verification, but it does not specify the exact documents required by the bank or MFO, as mentioned in the reasons for irrelevancy."
+    }
+  },
+  {
+    "question_id": 19,
+    "question": "Какие меры нужны для безопасных онлайн-платежей с детской карты?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the retrieval context! Keep up the good work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a comprehensive list of measures for secure online payments using a child's card. No improvements are necessary."
+    },
+    "contextual_relevancy": {
+      "score": 0.1111111111111111,
+      "reason": "The score is 0.11 because the provided statements do not offer any concrete measures or steps to ensure safe online payments with a child's card. While it mentions setting limits and restrictions, it lacks details on how these measures contribute to payment security."
+    }
+  },
+  {
+    "question_id": 20,
+    "question": "Как проверить, что финансовый посредник или платформа действует легально, и куда жаловаться при проблемах с инвестиционной платформой?",
+    "faithfulness": {
+      "score": 0.875,
+      "reason": "The score is 0.88 because the actual output suggests that disputes with unregistered online platforms can only be resolved in court, which contradicts the retrieval context, stating that disputes can be addressed by contacting the company and SRO."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear, concise response to the question. It offers a direct solution to the user's query without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.35714285714285715,
+      "reason": "The score is 0.36 because although the retrieval context provides some relevant information on where to file complaints about financial intermediaries, it does not directly address the legality checking process, which is the main focus of the input query."
+    }
+  },
+  {
+    "question_id": 21,
+    "question": "Как повысить шансы на одобрение кредита без переплаты за ненужные услуги?",
+    "faithfulness": {
+      "score": 0.9,
+      "reason": "The score is 0.90 because the actual output suggests that declining additional services may impact the terms of the contract, which contradicts the idea that it always reduces the total overpayment and PSC."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because your question is clear and concise, and the model provided a direct answer without any irrelevant details."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because all the statements in the retrieval context are relevant to the input, and there are no reasons for irrelevancy. Well done!"
+    }
+  },
+  {
+    "question_id": 22,
+    "question": "Какие материалы применяют для повышения износостойкости российских банкнот, пример — купюра 200 рублей?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the context!"
+    },
+    "answer_relevancy": {
+      "score": 0.8333333333333334,
+      "reason": "The score is 0.83 because the answer is relevant, but it could be more comprehensive. It provides a valid material used in Russian banknotes, but fails to mention other aspects like the specific production process or any additional treatments applied to enhance durability."
+    },
+    "contextual_relevancy": {
+      "score": 0.2857142857142857,
+      "reason": "The score is 0.29 because the context provides some relevant information about the materials used in Russian banknotes, but the majority of the statements focus on design elements and colors, which are not directly related to the input query about wear-resistant materials."
+    }
+  },
+  {
+    "question_id": 23,
+    "question": "Как получить доступ к средствам на счете при проблемах с картой?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, and no further improvements are needed."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear solution to the issue without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.18181818181818182,
+      "reason": "The score is 0.18 because the provided statements do not offer any actionable steps to access funds when there is an issue with the card. While the statements mention that funds remain in the account when a card is blocked, they do not provide any information on how to access those funds without a functional card."
+    }
+  },
+  {
+    "question_id": 24,
+    "question": "Чем отличаются госгарантии по деньгам на эскроу от гарантий по накоплениям в НПФ?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the retrieval context! Keep up the good work!"
+    },
+    "answer_relevancy": {
+      "score": 0.875,
+      "reason": "The score is 0.88 because the answer is relevant but could be more comprehensive. It provides a clear distinction between the two types of guarantees, but further details on their implications or benefits would enhance the response."
+    },
+    "contextual_relevancy": {
+      "score": 0.4166666666666667,
+      "reason": "The score is 0.42 because the context provides some relevant information about escrow accounts, such as state insurance and compensation limits, but it does not directly address the differences in guarantees between escrow accounts and pension fund contributions."
+    }
+  },
+  {
+    "question_id": 25,
+    "question": "В каких случаях можно получить повышенную компенсацию до 10 млн рублей при проблемах с банком?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the given information, and no further improvements are needed. Well done!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear and concise explanation. It addresses the question directly and offers a comprehensive understanding of the topic without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.3333333333333333,
+      "reason": "The score is 0.33 because the retrieval context provides some relevant information about receiving increased compensation of up to 10 million rubles, but it does not directly address the conditions or cases mentioned in the input query."
+    }
+  },
+  {
+    "question_id": 26,
+    "question": "Сколько максимально вернут по соцвычету и по взносам на ИИС при ставке НДФЛ 22%",
+    "faithfulness": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because the actual output contradicts the information about the maximum deduction limit for IIS-1 contributions, stating it as 400,000 RUB, which is incorrect according to the context."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant to the question, providing a clear and concise response without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.5833333333333334,
+      "reason": "The score is 0.58 because the context provides relevant information about the maximum refund for social benefits and contributions at a 22% tax rate, but it also includes some irrelevant details about a 13% tax rate and lacks a clear, direct answer to the specific input question."
+    }
+  },
+  {
+    "question_id": 27,
+    "question": "Когда заявлять в полицию при мошенничестве или аварии?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions to be found! The output is perfectly aligned with the retrieval context, and all information is accurate and consistent. Well done!"
+    },
+    "answer_relevancy": {
+      "score": 0.875,
+      "reason": "The score is 0.88 because the answer provides a relevant response to the question, but it could be improved by offering more specific details about the process and requirements for filing a police report in the given context."
+    },
+    "contextual_relevancy": {
+      "score": 0.5714285714285714,
+      "reason": "The score is 0.57 because while the statements provide some relevant information about reporting fraud to the police, they do not directly answer the question about the timing of the report. The statements focus more on the actions to take after experiencing fraud or an accident, rather than specifying when to contact the police."
+    }
+  },
+  {
+    "question_id": 28,
+    "question": "Что мешает оплате картой в России, если SWIFT не помеха?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found in the output, and it perfectly aligns with the given information."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear explanation of why SWIFT is not an obstacle for card payments in Russia. No further details are required."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because all the statements in the retrieval context are relevant to the input, and none of them are irrelevant. Well done!"
+    }
+  },
+  {
+    "question_id": 29,
+    "question": "Каков максимальный срок кредитных каникул, какие лимиты по сумме действуют?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, which is fantastic!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and accurate response."
+    },
+    "contextual_relevancy": {
+      "score": 0.6923076923076923,
+      "reason": "The score is 0.69 because while the statements mention credit holidays and their maximum duration, they do not provide specific information about the maximum term or sum limits for different types of loans, as indicated in the reasons for irrelevancy."
+    }
+  },
+  {
+    "question_id": 30,
+    "question": "Чем отличается вклад от инвестиций по защите средств?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant to the question, providing a clear and concise explanation of the differences between deposits and investments in terms of fund protection."
+    },
+    "contextual_relevancy": {
+      "score": 0.1111111111111111,
+      "reason": "The score is 0.11 because the context only provides a single relevant statement, which mentions that investment accounts are not included in the deposit insurance system, but it does not elaborate on the protection of funds or compare it to deposits."
+    }
+  },
+  {
+    "question_id": 31,
+    "question": "Где проверить легальность МФО перед оформлением «нуля»?",
+    "faithfulness": {
+      "score": 0.75,
+      "reason": "The score is 0.75 because the actual output may not include all companies, but this does not imply that these companies are illegal. The text clarifies that illegal companies are those not listed on Yandex search or the state register of microfinance organizations."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is comprehensive and directly addresses the user's request. It provides a clear and concise solution to the question, offering a helpful resource for checking the legality of microfinance organizations before applying for a loan."
+    },
+    "contextual_relevancy": {
+      "score": 0.08333333333333333,
+      "reason": "The score is 0.08 because the statement mentions checking the MFO's legality, but it does not provide a clear and direct answer to the question. It only suggests a general action without specifying a location or method, as indicated by the reasons: \"The statement mentions checking the legality of an MFO, but does not provide a direct answer to the input question.\" and \"This statement is about the rights of MFOs, not about checking their legality.\""
+    }
+  },
+  {
+    "question_id": 32,
+    "question": "Как банки получают госданные при онлайн-заявке на ипотеку?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, which is fantastic!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and accurate explanation of how banks obtain government data for online mortgage applications."
+    },
+    "contextual_relevancy": {
+      "score": 0.2,
+      "reason": "The score is 0.20 because the context does not provide much information about the process of banks obtaining government data during online mortgage applications. The relevant statements only briefly mention the use of digital profiles and government data, but do not elaborate on the specific steps or methods involved in the retrieval process."
+    }
+  },
+  {
+    "question_id": 33,
+    "question": "Как меняется лимит возмещения по ремонту авто при европротоколе без фотофиксации по сравнению с оформлением через ГИБДД?",
+    "faithfulness": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because the actual output incorrectly states that the compensation reduction is always fourfold, when in fact, it can be a twofold reduction in certain circumstances."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear explanation of the differences in compensation limits for car repairs under the European protocol without photo-fixation compared to processing through the State Traffic Safety Inspectorate."
+    },
+    "contextual_relevancy": {
+      "score": 0.4,
+      "reason": "The score is 0.40 because the provided statements do not offer a direct comparison between the compensation limits under the European protocol and registration through the State Traffic Safety Inspectorate, as noted in the reasons for irrelevancy."
+    }
+  },
+  {
+    "question_id": 34,
+    "question": "По каким признакам распознать фишинговый сайт или письмо?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the retrieval context!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and helpful response without any irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because all the statements in the retrieval context are relevant to the input, providing a comprehensive overview of how to identify phishing attempts through websites and emails. Well done!"
+    }
+  },
+  {
+    "question_id": 35,
+    "question": "Какие ПИФы лучше подходят для долгосрочной стратегии инвестирования?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found in the actual output, and it perfectly aligns with the retrieval context. Keep up the good work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and relevant response without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.3076923076923077,
+      "reason": "The score is 0.31 because the statements in the retrieval context do not provide any specific recommendations or comparisons of mutual funds (ПИФы) for long-term investment strategies, as requested in the input."
+    }
+  },
+  {
+    "question_id": 36,
+    "question": "Что делать, если в полисе ОСАГО указан неправильный КБМ, и когда начнут действовать исправления?",
+    "faithfulness": {
+      "score": 0.8571428571428571,
+      "reason": "The score is 0.86 because the actual output presents the insurance company's actions as definite, while the context only implies a potential scenario, creating a discrepancy."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear, concise response to the question. It addresses the issue of an incorrect KBH in the OSAGO policy and offers a solution by suggesting a correction process."
+    },
+    "contextual_relevancy": {
+      "score": 0.375,
+      "reason": "The score is 0.38 because the retrieval context does not provide a clear answer to the input question. While it mentions 'неправильный КБМ' and the need to correct errors, it does not specify when the corrections will take effect, which is a crucial part of the input query."
+    }
+  },
+  {
+    "question_id": 37,
+    "question": "Какие первые шаги сделать при мошенническом списании с карты?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the retrieval context!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is comprehensive and provides a clear, step-by-step guide to handling a fraudulent card transaction, which is exactly what the user asked for."
+    },
+    "contextual_relevancy": {
+      "score": 0.6363636363636364,
+      "reason": "The score is 0.64 because while the retrieval context provides some relevant steps to take after fraudulent card activity, it also includes statements about the bank's communication and procedures, which are not directly related to the initial actions a customer should take."
+    }
+  },
+  {
+    "question_id": 38,
+    "question": "Как изменился лимит социального вычета на спорт по сравнению с 2022 годом?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, and no further improvements are needed."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides the exact information requested without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.08333333333333333,
+      "reason": "The score is 0.08 because the context does not address the change in the limit compared to 2022, instead focusing on the limit for 2024 and unrelated expenses."
+    }
+  },
+  {
+    "question_id": 39,
+    "question": "Как корректно сравнить доходность НПФ с результатами управляющих компаний СФР с учетом комиссий?",
+    "faithfulness": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because the data on NPF profitability from the Bank of Russia tables does not include NPF commission deductions. The profitability is indicated after deducting NPF remuneration, but without taking into account other payments and commissions. The contradictions also mention that the SFD website is not referenced in the context, and that profitability data should be sought on the Bank of Russia website."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear, concise explanation without any irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.15384615384615385,
+      "reason": "The score is 0.15 because the statement does not offer any specific guidance on comparing the profitability of NPFs and SFO management companies, considering commissions, as requested in the input. Instead, it focuses on general investment comparisons and reminders."
+    }
+  },
+  {
+    "question_id": 40,
+    "question": "Каков лимит страхового возмещения по вкладам, когда доступна выплата до 10 млн рублей?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the retrieval context. Keep up the good work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides the exact information requested in the input. The output is clear and concise, with no unnecessary details or irrelevant statements."
+    },
+    "contextual_relevancy": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because the context provides some relevant information about insurance payouts and limits, but it does not directly address the specific limit of 10 million rubles mentioned in the input. The statements mention various scenarios where higher payouts are possible, but a clear and concise answer to the input question is not provided."
+    }
+  },
+  {
+    "question_id": 41,
+    "question": "Что происходит дальше, если должник отказывается от общения с коллекторами?",
+    "faithfulness": {
+      "score": 0.6,
+      "reason": "The score is 0.60 because the actual output seems to have mixed up the roles and responsibilities of the debtor and creditor, which is a significant error. It is crucial to clearly outline the legal rights and actions of each party in debt-related matters."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is directly relevant to the question, providing a clear and concise explanation of the consequences for debtors who refuse communication with debt collectors. No improvements are necessary."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because all the provided statements are relevant to the input. Great job!"
+    }
+  },
+  {
+    "question_id": 42,
+    "question": "Зачем ограничивать платежи по кредитам уровнем до 30% дохода?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions to be found! The output is perfectly aligned with the retrieval context, and no further improvements are needed."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear explanation of the reasoning behind the credit limit. No further details are required."
+    },
+    "contextual_relevancy": {
+      "score": 0.36363636363636365,
+      "reason": "The score is 0.36 because the reasons for irrelevancy highlight that the statements do not directly address the purpose of the 30% limit on credit payments, and instead focus on other aspects of financial management and debt."
+    }
+  },
+  {
+    "question_id": 43,
+    "question": "Как изменился размер соцвычета на спорт в 2024 по сравнению с 2022?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions, and the output is perfectly aligned with the retrieval context. Great job!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing the relevant information about the change in the social benefit for sports in 2024 compared to 2022."
+    },
+    "contextual_relevancy": {
+      "score": 0.0625,
+      "reason": "The score is 0.06 because the context does not provide any specific details about the change in the social tax deduction limit for sports in 2024 compared to 2022. While it mentions a refund amount for 2024, it does not give information about the change from 2022, as requested in the input."
+    }
+  },
+  {
+    "question_id": 44,
+    "question": "Какие меры безопасности рекомендуются при онлайн-расчетах с картой, в том числе при использовании бонусных программ?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a comprehensive list of security measures for online card transactions, including bonus programs. No improvements are necessary."
+    },
+    "contextual_relevancy": {
+      "score": 0.14285714285714285,
+      "reason": "The score is 0.14 because the provided statements are very general and do not offer specific advice tailored to online transactions or bonus programs. For instance, one statement mentions 'card-related issues' but focuses on verifying information, while another discusses security measures for physical terminals. These statements do not directly address the requested measures for secure online card usage."
+    }
+  },
+  {
+    "question_id": 45,
+    "question": "Какие инструменты помогают сократить расходы на праздники?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the retrieval context!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a list of tools to reduce holiday expenses without any irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.3333333333333333,
+      "reason": "The score is 0.33 because the context provides general financial advice and planning strategies, but lacks specific tools or methods to reduce holiday expenses, as requested in the input. While it mentions setting a budget and tracking expenses, it does not offer concrete instruments to achieve cost reduction."
+    }
+  },
+  {
+    "question_id": 46,
+    "question": "Как проверить полис ОСАГО через НСИС?",
+    "faithfulness": {
+      "score": 0.8333333333333334,
+      "reason": "The score is 0.83 because the system provides relevant information but misses some specific details mentioned in the claim, leading to a slight discrepancy."
+    },
+    "answer_relevancy": {
+      "score": 0.8333333333333334,
+      "reason": "The score is 0.83 because the answer is mostly relevant, but it could be improved by focusing solely on the steps to check the OSAGO policy through the NSIS, without including any additional information."
+    },
+    "contextual_relevancy": {
+      "score": 0.75,
+      "reason": "The score is 0.75 because while the retrieval context provides relevant steps to check the OSAGO policy through NSIS, it also includes statements about potential issues and fraud, which are not directly related to the initial query. The context could be more focused on the process of checking the policy, without the additional advice."
+    }
+  },
+  {
+    "question_id": 47,
+    "question": "Какой минимальный срок держать ИИС разных типов, чтобы сохранить право на налоговые льготы?",
+    "faithfulness": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because the actual output incorrectly states that the minimum holding period for IIS-3 is 5 years for contracts signed in 2024-2026, when it should be 6 years for 2024 and then increase by one year annually until 2030."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is directly relevant to the question, providing a clear and concise explanation of the minimum term for holding different types of Individual Investment Accounts (ИИС) to maintain tax benefits."
+    },
+    "contextual_relevancy": {
+      "score": 0.45454545454545453,
+      "reason": "The score is 0.45 because while the relevant statements provide some information about the minimum holding period for different types of investment accounts, they do not offer a clear and consistent answer. For example, one statement mentions a 3-year minimum, while another suggests a longer period for ИИС-3, ranging from 5 to 10 years."
+    }
+  },
+  {
+    "question_id": 48,
+    "question": "Какие шаги помогут не переплатить при выборе ипотеки по аналогии с борьбой с импульсивными покупками?",
+    "faithfulness": {
+      "score": 0.7777777777777778,
+      "reason": "The score is 0.78 because the actual output contains some inaccuracies. It seems to have misidentified the relevant value in the contract, and incorrectly stated that the creditor can require additional services, which contradicts the provided information."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear, concise explanation without any irrelevant details."
+    },
+    "contextual_relevancy": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because while some statements provide relevant advice on avoiding overpaying for a mortgage, such as comparing different mortgage programs and considering the cost of additional services, other statements are too general or not directly related to the specific steps requested in the input."
+    }
+  },
+  {
+    "question_id": 49,
+    "question": "Как облагаются проценты по вкладам с учетом страховой защиты вкладов?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the retrieval context! Great job!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant to the question, providing a clear and concise explanation of how interest on deposits is taxed with insurance coverage."
+    },
+    "contextual_relevancy": {
+      "score": 0.23076923076923078,
+      "reason": "The score is 0.23 because the context provides limited information about deposit insurance and tax on interest, with no clear connection to the input question. While it mentions deposit insurance and interest, it does not explain how interest is taxed with insurance protection."
+    }
+  },
+  {
+    "question_id": 50,
+    "question": "Какие ПИФы подходят для краткосрочной стратегии?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the context!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear explanation of why the score is at its maximum value."
+    },
+    "contextual_relevancy": {
+      "score": 0.25,
+      "reason": "The score is 0.25 because the context only briefly mentions collective investment through PIFs, without providing specific details on which PIFs are suitable for short-term strategies."
+    }
+  },
+  {
+    "question_id": 51,
+    "question": "Как безопасно оформить ОСАГО онлайн через финансовую платформу?",
+    "faithfulness": {
+      "score": 0.8888888888888888,
+      "reason": "The score is 0.89 because the summary does not mention that the marketplace offers compensation without involving the Deposit Insurance Agency, which is a crucial detail."
+    },
+    "answer_relevancy": {
+      "score": 0.7777777777777778,
+      "reason": "The score is 0.78 because the answer provides a general overview of the process, but lacks specific instructions on how to navigate the financial platform to purchase the insurance. A more detailed step-by-step guide would improve the score."
+    },
+    "contextual_relevancy": {
+      "score": 0.25,
+      "reason": "The score is 0.25 because the context provides very little information on how to safely purchase OSAGO online. While it mentions verifying website addresses and the benefits of financial platforms, it does not offer a comprehensive guide or specific steps to ensure a secure transaction."
+    }
+  },
+  {
+    "question_id": 52,
+    "question": "Как перейти к новому брокеру, если у вас ИИС-3?",
+    "faithfulness": {
+      "score": 0.7142857142857143,
+      "reason": "The score is 0.71 because the actual output seems to imply that the old account is closed and a new IIS-3 is created, which is not explicitly stated in the context. The contradictions highlight the ambiguity between 'closing' and 'transforming' the account, and the lack of clarity on the closure process."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and provides a clear step-by-step process to transfer an Individual Investment Account (ИИС) to a new broker. It is a straightforward and helpful response, addressing the user's query directly."
+    },
+    "contextual_relevancy": {
+      "score": 0.8333333333333334,
+      "reason": "The score is 0.83 because while the context provides relevant steps for transferring assets to a new broker, it does not directly address the initial question of how to initiate the switch, leaving some uncertainty."
+    }
+  },
+  {
+    "question_id": 53,
+    "question": "Как по-разному обращаются со штрафами и пенями при ипотечных каникулах и при судебном банкротстве?",
+    "faithfulness": {
+      "score": 0.75,
+      "reason": "The score is 0.75 because the actual output implies that the write-off process is automatic, which is not explicitly stated in the retrieval context, leading to a slight discrepancy."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant to the question, providing a clear and concise explanation of the differences in handling fines and penalties during mortgage holidays and court bankruptcy."
+    },
+    "contextual_relevancy": {
+      "score": 0.1111111111111111,
+      "reason": "The score is 0.11 because the statement only briefly mentions that fines and penalties are not applicable during certain periods, but it does not provide any comparison or specific details about their treatment in mortgage holidays and bankruptcy, which is the main focus of the input question."
+    }
+  },
+  {
+    "question_id": 54,
+    "question": "Какие налоговые льготы доступны по страхованию жизни?",
+    "faithfulness": {
+      "score": 0.16666666666666666,
+      "reason": "The score is 0.17 because the actual output seems to have multiple inconsistencies with the context. It confuses the concept of opening an account with a policy, misinterprets contribution deductions as premium deductions, and introduces the term 'insurance income deduction' which is not in the context. Additionally, it incorrectly states that policy cancellation leads to benefit termination, when the context mentions a different condition related to fund withdrawal."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant, providing a clear and concise response to the question about tax benefits for life insurance without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because while the statement mentions tax benefits, it does not specifically address tax advantages for life insurance, as indicated by the reasons for irrelevancy."
+    }
+  },
+  {
+    "question_id": 55,
+    "question": "Почему страховка дороже при оплате через кредит?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output is perfectly faithful to the retrieval context with no contradictions found. Great job!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear explanation for the higher insurance cost when paying through credit. It is a direct and concise response to the question."
+    },
+    "contextual_relevancy": {
+      "score": 0.3333333333333333,
+      "reason": "The score is 0.33 because the context provides some relevant statements about insurance costs and credit, but none of them directly explain the reason for the higher insurance price when paid through credit. For example, the statement 'Банки часто предлагают включить страховку в стоимость кредита. Стоит учитывать, что в этом случае она обойдется вам дороже — ведь на цену полисов тоже будут начисляться проценты.' mentions that insurance included in the credit price is more expensive due to interest rates, but it does not explicitly state why the insurance is more expensive in this scenario."
+    }
+  },
+  {
+    "question_id": 56,
+    "question": "Какие возрастные ограничения есть при накоплении на ребенка через вклад по сравнению с НСЖ?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the retrieval context!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear and concise explanation of the age restrictions for child savings accounts, with no irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.16666666666666666,
+      "reason": "The score is 0.17 because the context does not address the specific age restrictions for savings accounts compared to NSJ, as requested in the input. While it mentions age limits for insurance policies, it does not provide the required information about savings accounts."
+    }
+  },
+  {
+    "question_id": 57,
+    "question": "Почему массовая рассылка заявок снижает шансы на одобрение?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, which is fantastic!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is directly relevant to the question, providing a clear and concise explanation. The response is tailored to the context and offers a comprehensive understanding of the topic without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.09090909090909091,
+      "reason": "The score is 0.09 because the provided statement does not offer a clear explanation for the impact of mass mailing applications on approval chances, instead focusing on how credit bureaus interpret multiple inquiries as suspicious behavior and subsequently lower ratings, albeit not significantly."
+    }
+  },
+  {
+    "question_id": 58,
+    "question": "Как убедиться, что письмо о школьной субсидии не от мошенников?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and helpful response."
+    },
+    "contextual_relevancy": {
+      "score": 0.6923076923076923,
+      "reason": "The score is 0.69 because while some statements provide relevant advice on identifying scam emails, they do not specifically address school subsidy letters. The advice is general and could apply to various scam scenarios, but lacks concrete guidance for the given context."
+    }
+  },
+  {
+    "question_id": 59,
+    "question": "Как выгодно использовать распродажи при подготовке к школе или к Новому году?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given context!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and helpful response."
+    },
+    "contextual_relevancy": {
+      "score": 0.4117647058823529,
+      "reason": "The score is 0.41 because the provided statements offer general advice on saving money during sales, but lack specific strategies for utilizing discounts and promotions to prepare for school or the New Year. While some statements mention tracking sales and comparing prices, they do not provide a comprehensive guide on maximizing savings for the given context."
+    }
+  },
+  {
+    "question_id": 60,
+    "question": "Чем отличаются ОСАГО, каско, ДСАГО по выплатам?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found in the actual output, which is a perfect match to the retrieval context!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear distinction between the three types of insurance."
+    },
+    "contextual_relevancy": {
+      "score": 0.4444444444444444,
+      "reason": "The score is 0.44 because the retrieval context provides some relevant information about the differences in payouts between OSAGO, CASCO, and DSAGO, but it is not comprehensive. It mentions that OSAGO is mandatory and covers damages to others, while CASCO is voluntary and covers damages to the insured vehicle, even if the driver is at fault. However, it does not clearly outline the specific payout scenarios for each type of insurance, leaving the explanation somewhat incomplete."
+    }
+  },
+  {
+    "question_id": 61,
+    "question": "Чем грозит просрочка по «нулевому» микрозайму для будущих заявок на кредит?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the retrieval context! Great job!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and relevant explanation without any unnecessary details."
+    },
+    "contextual_relevancy": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because while some statements mention the impact on credit history and future loans, they do not specifically address the consequences of a delayed 'zero-interest' microloan for future credit applications, as indicated in the reasons for irrelevancy."
+    }
+  },
+  {
+    "question_id": 62,
+    "question": "Когда имеет смысл жаловаться в Банк России по проблеме с финансовой организацией?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the retrieval context! Keep up the good work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear, concise response to the question. Well done!"
+    },
+    "contextual_relevancy": {
+      "score": 0.4444444444444444,
+      "reason": "The score is 0.44 because while the statement mentions the Bank of Russia and provides some relevant information, it does not directly answer the question of when to complain to the Bank of Russia. It offers general advice and a list of organizations to which the Bank of Russia can provide assistance, but it lacks a clear indication of the appropriate timing for complaints."
+    }
+  },
+  {
+    "question_id": 63,
+    "question": "Какие ограничения на выдачу наличной валюты действуют для средств на счетах по сравнению с деньгами в банковской ячейке?",
+    "faithfulness": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because the actual output incorrectly states that the excess amount cannot be withdrawn or transferred, when in fact, it can be withdrawn in rubles or transferred to a foreign bank."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear explanation of the topic, with no irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.7272727272727273,
+      "reason": "The score is 0.73 because while the retrieval context does provide some relevant information about cash withdrawal limits, it does not fully address the comparison between accounts and safe deposit boxes, as mentioned in the input."
+    }
+  },
+  {
+    "question_id": 64,
+    "question": "Какие приемы помогают сократить импульсивные траты?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the given information."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the model provided a clear and concise response without any irrelevant information. Well done!"
+    },
+    "contextual_relevancy": {
+      "score": 0.8888888888888888,
+      "reason": "The score is 0.89 because the relevant statements provide a range of techniques to reduce impulsive spending, such as using a 'postpone' option, making lists, and planning purchases, but the context lacks specific details or a clear structure to fully address the input."
+    }
+  },
+  {
+    "question_id": 65,
+    "question": "Вернут ли деньги за ОСАГО при продаже автомобиля по сравнению со случаем отзыва лицензии у страховщика?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found in the output, and it perfectly aligns with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 0.875,
+      "reason": "The score is 0.88 because the answer is relevant, but it could be more detailed. It provides a clear answer regarding the refund process for OSAGO, but a more comprehensive explanation would improve the score."
+    },
+    "contextual_relevancy": {
+      "score": 0.2,
+      "reason": "The score is 0.20 because the input asks about the refund process for OSAGO (compulsory motor third-party liability insurance) in the event of selling a car or insurer license revocation, but the provided statements focus on the general procedures after license revocation without explicitly mentioning the refund details."
+    }
+  },
+  {
+    "question_id": 66,
+    "question": "Зачем нужны обновления системы вместе с антивирусом для защиты от фишинга?",
+    "faithfulness": {
+      "score": 0.8333333333333334,
+      "reason": "The score is 0.83 because the actual output suggests that disabling a security system makes it easier for hackers to bypass the system, which is not explicitly mentioned in the context."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear explanation of why system updates and antivirus software are essential for phishing protection."
+    },
+    "contextual_relevancy": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because while the retrieval context provides relevant information about antivirus software and system updates, some statements are not directly related to the input, as they focus on website safety and spam protection rather than the specific topic of phishing protection."
+    }
+  },
+  {
+    "question_id": 67,
+    "question": "Почему сумма списания по рублевой карте за границей может отличаться от ожидаемой?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, and no further improvements are needed."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear explanation for the discrepancy in the amount charged on a ruble card abroad. No further details are needed to fully answer the query."
+    },
+    "contextual_relevancy": {
+      "score": 0.38461538461538464,
+      "reason": "The score is 0.38 because the provided statements do not offer a comprehensive explanation for the potential discrepancy in debit amounts when using a ruble card abroad. While mentioning currency conversion, commissions, and payment options, they lack a clear connection to the input question."
+    }
+  },
+  {
+    "question_id": 68,
+    "question": "Как проверить легальность посредника для привлечения финансирования онлайн?",
+    "faithfulness": {
+      "score": 0.9,
+      "reason": "The score is 0.90 because the actual output includes details about public financial reports and audit certificates, which are not mentioned in the context. This discrepancy is a clear contradiction and impacts the overall faithfulness."
+    },
+    "answer_relevancy": {
+      "score": 0.7272727272727273,
+      "reason": "The score is 0.73 because while the input asks for ways to check the legality of an intermediary for online funding, the output provides methods that are not direct or reliable enough. The suggestions are not entirely irrelevant, but they do not offer a clear and effective solution, which lowers the score."
+    },
+    "contextual_relevancy": {
+      "score": 0.46153846153846156,
+      "reason": "The score is 0.46 because while some of the statements provide general advice on due diligence, such as researching a platform's reputation and reviewing contracts, they do not offer specific methods to verify the legality of an intermediary for online funding. The context lacks direct relevance to the input question."
+    }
+  },
+  {
+    "question_id": 69,
+    "question": "Что может покупать неквалифицированный инвестор без тестов с учетом ограничений на иностранные бумаги?",
+    "faithfulness": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because the actual output incorrectly states that unqualified investors cannot purchase foreign stock depositary receipts, when in fact, they can buy these receipts under certain conditions. Additionally, the output fails to mention the ability of unqualified investors to access foreign investment funds (ETFs) linked to major global indices."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear explanation of the topic, with no irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.4444444444444444,
+      "reason": "The score is 0.44 because the statements provide some relevant information about the options available to unqualified investors, but they do not directly address the specific restrictions on foreign securities for such purchases, as mentioned in the input."
+    }
+  },
+  {
+    "question_id": 70,
+    "question": "В каких случаях действует госстрахование вкладов?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, and no further improvements are needed. Well done!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear and concise explanation of the topic. It covers all the necessary information without any irrelevant details, ensuring a high-quality response."
+    },
+    "contextual_relevancy": {
+      "score": 0.07692307692307693,
+      "reason": "The score is 0.08 because the retrieval context provides very little information relevant to the input. The only relevant statement is a general comment about insurance compensation, which does not address the specific cases of state insurance validity."
+    }
+  },
+  {
+    "question_id": 71,
+    "question": "Какие последствия ждут продавца, если новый владелец ездит по его полису ОСАГО?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output is perfectly aligned with the retrieval context, with no contradictions found!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear and concise explanation of the consequences for the seller if the new owner drives with their insurance policy."
+    },
+    "contextual_relevancy": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because the retrieval context provides some relevant information about the risks and consequences for the seller, but it also includes details that are not directly related to the input question. For instance, it mentions risks for the buyer and the process of selling a car, which are not the main focus of the query."
+    }
+  },
+  {
+    "question_id": 72,
+    "question": "Почему не стоит спешить с микрозаймом?",
+    "faithfulness": {
+      "score": 0.8571428571428571,
+      "reason": "The score is 0.86 because the actual output mentions a specific percentage of income related to microloans, which is not found in the retrieval context."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the model provided a direct and concise answer without any irrelevant information. Well done!"
+    },
+    "contextual_relevancy": {
+      "score": 0.45454545454545453,
+      "reason": "The score is 0.45 because the context provides some relevant statements, such as 'При обращении за микрозаймом или кредитом следует сначала оценить необходимость и способность погашения долга.' and 'В случае болезни или увольнения может возникнуть сложность с погашением долга.', but these statements do not directly address the input's question about why one shouldn't rush into a microloan. The reasons for irrelevancy highlight this gap in the context."
+    }
+  },
+  {
+    "question_id": 73,
+    "question": "Обязателен ли для продавцов прием платежей по QR-коду через СБП по сравнению с планом приема цифровых рублей крупным бизнесом?",
+    "faithfulness": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because the actual output seems to be missing some crucial information. It should include the fact that companies with an annual revenue of 20 million rubles or more are required to accept card payments, including 'Мир' cards."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and accurate response."
+    },
+    "contextual_relevancy": {
+      "score": 0.3,
+      "reason": "The score is 0.30 because the context does not provide a clear answer to the question of whether QR code payments are mandatory for sellers. While it mentions that sellers can choose their preferred payment methods, it does not explicitly state if QR code payments are compulsory, as indicated by the reasons for irrelevancy."
+    }
+  },
+  {
+    "question_id": 74,
+    "question": "Защищены ли деньги на счете эскроу при покупке строящегося жилья?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the retrieval context! Great job!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and accurate response without any irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.75,
+      "reason": "The score is 0.75 because while the context provides relevant information about the protection of escrow accounts, it does not directly address the specific scenario of buying under-construction property. The statements 'Счет эскроу обеспечивает защиту денег покупателя при покупке строящегося жилья.' and 'В случае банкротства застройщика вы можете забрать сумму со счета эскроу в любой момент.' are particularly pertinent, but more detail is needed for a higher score."
+    }
+  },
+  {
+    "question_id": 75,
+    "question": "Как кредитные каникулы мобилизованного отражаются на созаемщике?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output is perfectly aligned with the retrieval context and there are no contradictions to be found!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is directly relevant to the question, providing a clear and concise explanation of how the credit holiday of a mobilized person affects a co-borrower. The response is comprehensive and covers all relevant aspects without any irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.5454545454545454,
+      "reason": "The score is 0.55 because the relevant statement 'Все созаемщики участника СВО или членов его семьи тоже автоматически получают отсрочку платежей на время каникул.' provides some information about the impact on co-borrowers, but the context does not offer further details or conditions regarding this aspect."
+    }
+  },
+  {
+    "question_id": 76,
+    "question": "Как снизить риск при онлайн‑покупках к школе?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output perfectly matches the retrieval context with no contradictions!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the response is concise and directly addresses the question, providing a clear and helpful suggestion for reducing risks when making online purchases for school supplies."
+    },
+    "contextual_relevancy": {
+      "score": 0.36363636363636365,
+      "reason": "The score is 0.36 because the retrieval context does not offer any practical advice on reducing risks for online school purchases. While it mentions potential scams and the importance of verifying benefits, it does not provide a clear strategy to mitigate risks during online transactions."
+    }
+  },
+  {
+    "question_id": 77,
+    "question": "Какие базовые меры кибербезопасности соблюдать при онлайн‑оплате услуг?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, and no further improvements are needed. Well done!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear, concise response to the user's question."
+    },
+    "contextual_relevancy": {
+      "score": 0.5,
+      "reason": "The score is 0.50 because while the statements provide some general cybersecurity advice, they do not specifically address basic measures for online payments as requested in the input. For instance, the statement 'Вводите реквизиты вашей банковской карты (включая трехзначный код с обратной стороны) только на проверенных сайтах...' is relevant, but it doesn't offer comprehensive tips tailored to online payment security."
+    }
+  },
+  {
+    "question_id": 78,
+    "question": "Как совместить выплаты по автокредиту с созданием подушки безопасности?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output perfectly aligns with the retrieval context, and there are no contradictions to report. Keep up the good work!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear, concise solution to the question, offering a comprehensive strategy for managing finances effectively."
+    },
+    "contextual_relevancy": {
+      "score": 0.0,
+      "reason": "The score is 0.00 because none of the statements are relevant to the input. The reasons for irrelevancy highlight that the context does not address the specific topic of combining auto loan payments with a financial safety net."
+    }
+  },
+  {
+    "question_id": 79,
+    "question": "Зачем для вклада выбирать надежный банк в конце года?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, and no further improvements are needed. Well done!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and relevant reason for choosing a reliable bank at the end of the year."
+    },
+    "contextual_relevancy": {
+      "score": 0.09090909090909091,
+      "reason": "The score is 0.09 because the provided statement does not offer a reason for choosing a reliable bank at the end of the year, and instead discusses a specific financial instrument. It mentions a bank but does not elaborate on the importance of reliability at this time."
+    }
+  },
+  {
+    "question_id": 80,
+    "question": "Каковы сроки подачи заявлений при ликвидации МФО по сравнению с обращением за возмещением при отзыве лицензии у НПФ?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the retrieval context! Great job!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant and provides a clear and concise response to the question. It offers a direct comparison between the timelines for filing claims in the case of MFO liquidation and seeking compensation during the revocation of an NPF license."
+    },
+    "contextual_relevancy": {
+      "score": 0.08333333333333333,
+      "reason": "The score is 0.08 because the context does not provide any specific information about the timelines for MFO liquidation, and only briefly mentions a general two-month deadline for creditor claims in cases of company liquidation or bankruptcy, which may not be directly applicable to the input's focus on MFO and NPF procedures."
+    }
+  },
+  {
+    "question_id": 81,
+    "question": "Как сохранить прожиточный минимум при аресте счетов после решения суда?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions and the output is perfectly aligned with the context!"
+    },
+    "answer_relevancy": {
+      "score": 0.8181818181818182,
+      "reason": "The score is 0.82 because while the answer is relevant, it could be improved by providing more specific details or context regarding the legal process and any potential options for preserving the minimum living standard after the court decision."
+    },
+    "contextual_relevancy": {
+      "score": 0.6923076923076923,
+      "reason": "The score is 0.69 because while some statements provide relevant information about preserving the subsistence minimum, others are not directly related to the input query, such as 'А затем вы постепенно вернете им деньги.' and 'Защита прожиточного минимума действует только в течение календарного месяца.'."
+    }
+  },
+  {
+    "question_id": 82,
+    "question": "Зачем в бизнес-плане заранее прописывать действия на случай ухудшения условий?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the retrieval context!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and valid explanation for the importance of contingency planning in a business plan."
+    },
+    "contextual_relevancy": {
+      "score": 0.18181818181818182,
+      "reason": "The score is 0.18 because the context does not adequately address the importance of planning for deteriorating conditions in a business plan, despite mentioning risk calculation and the need to consider various factors that could impact the business. It lacks a clear connection between the input and the provided statements."
+    }
+  },
+  {
+    "question_id": 83,
+    "question": "Как соотносится переплата по займам под 0% при просрочке с законным лимитом по краткосрочным кредитам?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found! The output is perfectly aligned with the retrieval context, and no further improvements are needed."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is directly relevant to the question, providing a clear and concise explanation of the relationship between the 0% interest overpayment on loans and the legal limit for short-term loans in the event of a delay."
+    },
+    "contextual_relevancy": {
+      "score": 0.08333333333333333,
+      "reason": "The score is 0.08 because the statement does not offer any meaningful insight into the relationship between overpayment on 0% loans and the legal limit for short-term loans in the event of a delay. It fails to address the specific correlation requested in the input, leaving the context largely irrelevant."
+    }
+  },
+  {
+    "question_id": 84,
+    "question": "Каков общий лимит вычета на взносы при сочетании ИИС‑3, ПДС, доппенсии?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is fully relevant to the question, providing a clear and concise response without any irrelevant information."
+    },
+    "contextual_relevancy": {
+      "score": 0.9166666666666666,
+      "reason": "The score is 0.92 because the context provides a clear and concise answer to the question, with relevant details about the combined limit for deductions on contributions to IIC-3, PDS, and additional pensions. The context also offers a practical example to illustrate the calculation, ensuring a good understanding of the topic."
+    }
+  },
+  {
+    "question_id": 85,
+    "question": "Как созаемщик влияет на условия ипотеки по сравнению с поручителем?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found, and the output is perfectly aligned with the given information!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the response is a direct and accurate answer to the question, with no irrelevant information provided."
+    },
+    "contextual_relevancy": {
+      "score": 0.3333333333333333,
+      "reason": "The score is 0.33 because the context provides some relevant statements about co-borrowers and guarantors, but it does not directly compare their impact on mortgage terms. While it mentions the rights and obligations of co-borrowers and guarantors, it does not explicitly discuss how these roles affect the conditions of a mortgage."
+    }
+  },
+  {
+    "question_id": 86,
+    "question": "Почему пенсионеры, а также бывшие жертвы пирамид становятся мишенью повторных афер?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions found in the actual output, and it perfectly aligns with the information provided in the retrieval context. Great job!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear explanation without any irrelevant details."
+    },
+    "contextual_relevancy": {
+      "score": 0.9230769230769231,
+      "reason": "The score is 0.92 because the input question is about why pensioners and former pyramid scheme victims are targeted for repeated fraud, and the relevant statements provide detailed insights into the tactics used by scammers to exploit this vulnerable group. The reasons for irrelevancy mention that the statement does not address this specific aspect, which is crucial for a comprehensive answer."
+    }
+  },
+  {
+    "question_id": 87,
+    "question": "Где надежнее сохранить деньги при отзыве лицензии банка: в векселе или при расчетах через банковскую ячейку?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the output perfectly matches the context with no contradictions!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear and accurate solution for safeguarding money during a bank's license revocation."
+    },
+    "contextual_relevancy": {
+      "score": 0.3333333333333333,
+      "reason": "The score is 0.33 because while the statements mention the safety of bank cells and promissory notes, they do not directly compare the two methods in relation to a bank's license revocation. The statements provide partial information but do not give a comprehensive answer to the input question."
+    }
+  },
+  {
+    "question_id": 88,
+    "question": "Чем государственные гарантии по вкладам отличаются от защиты пенсионных накоплений в НПФ?",
+    "faithfulness": {
+      "score": 0.7142857142857143,
+      "reason": "The score is 0.71 because the actual output seems to suggest that pension funds are not fully guaranteed, which contradicts the statement that pension contributions, including mandatory, voluntary, and co-financed contributions, are insured. This discrepancy raises concerns about the reliability of the information."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer is concise and directly addresses the question, providing a clear explanation of the differences between state guarantees on deposits and the protection of pension savings in NPFs."
+    },
+    "contextual_relevancy": {
+      "score": 0.0,
+      "reason": "The score is 0.00 because the context does not address the differences between state guarantees on deposits and the protection of pension savings in NPFs, as indicated by the reasons for irrelevancy."
+    }
+  },
+  {
+    "question_id": 89,
+    "question": "Зачем перед вводом личных данных проверять подлинность сайта, а также источник установки приложения?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context with no contradictions found!"
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the response perfectly addresses the user's question without any irrelevant information. Great job!"
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the context perfectly answers the input, explaining that checking sites prevents access to \"паролям, кодам и данным карт пользователей\" and that using official stores is \"безопаснее, чем загрузка со сторонних ресурсов\"!"
+    }
+  },
+  {
+    "question_id": 90,
+    "question": "Что делать, если пришло сообщение о блокировке карты с просьбой перезвонить по незнакомому номеру?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context with no contradictions found!"
+    },
+    "answer_relevancy": {
+      "score": 0.875,
+      "reason": "The score is 0.88 because the response accurately addresses the phishing threat, but it is not higher due to the inclusion of general advice on SMS notifications which does not directly resolve the immediate issue of the suspicious message."
+    },
+    "contextual_relevancy": {
+      "score": 0.7,
+      "reason": "The score is 0.70 because the context provides direct instructions for the input, stating that if a message asks to \"позвонить по неизвестному номеру... это могут быть мошенники\" and advising the user to \"звонить только на официальный номер горячей линии банка\"."
+    }
+  },
+  {
+    "question_id": 91,
+    "question": "Почему оплата через мобильные платежные системы безопаснее ввода реквизитов карты на сайтах?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context with no contradictions found!"
+    },
+    "answer_relevancy": {
+      "score": 0.9090909090909091,
+      "reason": "The score is 0.91 because the response accurately addresses the security of mobile payments, but it is not higher due to a diversion into describing the appearance of phishing sites rather than focusing on the inherent safety mechanisms of mobile systems compared to manual entry."
+    },
+    "contextual_relevancy": {
+      "score": 0.5833333333333334,
+      "reason": "The score is 0.58 because while the context provides several direct answers, such as stating that the \"device encrypts card data\" and the \"seller does not see card details,\" it also includes extraneous information about QR codes, NFC stability, and SMS codes that are not directly related to the comparison between mobile payment systems and manual card entry."
+    }
+  },
+  {
+    "question_id": 92,
+    "question": "Как открыть вклад дистанционно с учетом безопасности биометрии?",
+    "faithfulness": {
+      "score": 0.7142857142857143,
+      "reason": "The score is 0.71 because the output incorrectly claims that a Gosuslugi account and standard biometrics are mandatory for all account openings and that a new-style international passport and NFC-enabled phone are required for all biometrics submissions, whereas the context specifies these are only for specific registration paths."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the response perfectly addresses the user's request without any irrelevant information. Great job!"
+    },
+    "contextual_relevancy": {
+      "score": 0.25,
+      "reason": "The score is 0.25 because while the context mentions that \"После сдачи биометрии лица и голоса в ЕБС можно открывать вклады и счета,\" it focuses on the general ability to open accounts rather than providing specific instructions on \"how to open a deposit remotely taking into account biometric security\" as requested in the input."
+    }
+  },
+  {
+    "question_id": 93,
+    "question": "Как подтверждается подписание онлайн-кредита?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the actual output is perfectly faithful to the retrieval context with no contradictions found!"
+    },
+    "answer_relevancy": {
+      "score": 0.4444444444444444,
+      "reason": "The score is 0.44 because while the output likely touched upon the topic, it included significant irrelevant information regarding internal logging, refusal processes, legal implications, and general support advice instead of focusing strictly on how the signing is confirmed to the user."
+    },
+    "contextual_relevancy": {
+      "score": 0.15384615384615385,
+      "reason": "The score is 0.15 because while one statement explains that a \"код из уведомления банка или МФО\" is used as a signature, the majority of the context is irrelevant, focusing on \"отказаться от него без всяких последствий,\" interest accrual, and legal disputes."
+    }
+  },
+  {
+    "question_id": 94,
+    "question": "Как при расчете ПДН учитывают кредит, где вы созаемщик, по сравнению с кредитом, где вы поручитель?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer fully addresses the question with no irrelevant content."
+    },
+    "contextual_relevancy": {
+      "score": 0.7142857142857143,
+      "reason": "The score is 0.71 because the retrieval context contains some relevant guidance on how to account for co‑signer income in PDN calculation, e.g., \"Необходимо сложить свой доход с доходом созаемщика…\", but also includes unrelated loan details such as \"Сергей два года назад брал кредит на 400 000 ₽\", which dilute relevance."
+    }
+  },
+  {
+    "question_id": 95,
+    "question": "Куда обращаться за выплатами: советские вклады против вкладов банка с отозванной лицензией?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer fully addresses the question without any irrelevant content."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the retrieval context directly lists the procedures for obtaining compensation from Soviet deposits, including that \"Компенсации по советским вкладам выдают в отделениях Сбербанка\" and the required documents, which match the user's query."
+    }
+  },
+  {
+    "question_id": 96,
+    "question": "Кто вправе запрашивать информацию о ценных бумагах умершего?",
+    "faithfulness": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because the actual output incorrectly states that banks, brokers, registrars, and depositaries approach notaries to provide information, whereas the context clearly says that notaries request information from these institutions."
+    },
+    "answer_relevancy": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because the answer incorrectly states that only entities that provide information can request it, which is irrelevant to the question about who can request information on a deceased person’s securities. The rest of the answer is correct, so the score reflects a moderate level of relevance."
+    },
+    "contextual_relevancy": {
+      "score": 0.3333333333333333,
+      "reason": "The score is 0.33 because while the context contains many irrelevant statements such as \"не позднее шести месяцев с даты смерти наследодателя\" and \"Информация о счетах и вкладах человека — это банковская тайна\", it also includes relevant information that \"Именно нотариус будет собирать информацию об активах умершего\" and \"Справки о счетах и вкладах покойного может запросить только нотариус\", which partially addresses the question."
+    }
+  },
+  {
+    "question_id": 97,
+    "question": "В каких схемах применяется номинальный счет?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer fully addresses the question with no irrelevant content."
+    },
+    "contextual_relevancy": {
+      "score": 0.6470588235294118,
+      "reason": "The score is 0.65 because the context contains a relevant statement that \"Расчеты между продавцом и покупателем, когда продавец еще не расплатился по ипотечному кредиту и покупатель собирается приобрести жилье за счет заемных денег, как правило, проходят через так называемый номинальный счет,\" directly addressing the question, while also including irrelevant details such as \"Подробнее о том, как проводить сделки с заложенным жильем, читайте в статье «Как продать или купить ипотечную квартиру»,\" which do not pertain to nominal account schemes."
+    }
+  },
+  {
+    "question_id": 98,
+    "question": "Как подготовиться к ежегодным тратам без стресса?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because there are no contradictions."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer fully addresses the question about preparing for annual expenses without stress, with no irrelevant statements."
+    },
+    "contextual_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the retrieval context provides clear, actionable guidance on budgeting, expense control, and financial planning that directly addresses how to prepare for annual expenses without stress."
+    }
+  },
+  {
+    "question_id": 99,
+    "question": "Что произойдет с ипотекой при разводе, если один из супругов перестанет платить?",
+    "faithfulness": {
+      "score": 1.0,
+      "reason": "Great job! The output perfectly matches the retrieval context, so the faithfulness score is 1.00."
+    },
+    "answer_relevancy": {
+      "score": 1.0,
+      "reason": "The score is 1.00 because the answer fully addresses the question about what happens to a mortgage when one spouse stops paying during a divorce, with no irrelevant statements."
+    },
+    "contextual_relevancy": {
+      "score": 0.6666666666666666,
+      "reason": "The score is 0.67 because the retrieval context contains relevant statements such as \"Ипотеку придется гасить одному человеку\" and \"Если один из супругов перестанет платить, банк выставит на торги только его долю недвижимости\", which directly address the scenario of one spouse stopping payments. However, it also includes several irrelevant points about both spouses stopping payments and post‑sale distribution, which slightly lowers the overall relevance."
+    }
+  }
+]

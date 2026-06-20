@@ -1,7 +1,7 @@
 import logging
 import os
 
-from src.utils.config import settings
+from configs.config import settings
 
 
 os.makedirs(

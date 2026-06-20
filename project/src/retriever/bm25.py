@@ -1,15 +1,13 @@
 from typing import List
 import re
-
 from rank_bm25 import BM25Okapi
-
+import nltk
 from nltk.corpus import stopwords
-
 from langchain_core.documents import Document
 
 from src.utils.logger import logger
 
-
+nltk.download('stopwords', quiet=True)
 russian_stopwords = set(
     stopwords.words("russian")
 )
@@ -50,16 +48,18 @@ def clean_and_tokenize(text):
     
     filtered_tokens = [
         token for token in tokens 
-        if token not in all_stopwords  # убираем стоп-слова
-        and len(token) > 2  # убираем односимвольные токены
-        and any(c.isalpha() for c in token)  # должен быть хотя бы одна буква
+        if token not in all_stopwords
+        and len(token) > 2
+        and any(c.isalpha() for c in token)
     ]
     
     return filtered_tokens
 
 
 def build_bm25_retriever(all_chunks: List[Document]):
-
+    """
+    Построение BM25 ретривера
+    """
     logger.info("Building BM25 retriever...")
 
     corpus = [clean_and_tokenize(doc.page_content) for doc in all_chunks]

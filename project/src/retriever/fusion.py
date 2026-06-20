@@ -1,27 +1,18 @@
 from typing import List
-
 import numpy as np
-
-from langchain_core.documents import Document
-
-from langchain_community.vectorstores import FAISS
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-from typing import List
-
-import numpy as np
-
+from langchain_core.documents import Document
+from langchain_community.vectorstores import FAISS
 from langchain_core.documents import (
-    Document,
+    Document
 )
-
 from langchain_community.vectorstores import (
-    FAISS,
+    FAISS
 )
 
 from src.retriever.bm25 import (
-    clean_and_tokenize,
+    clean_and_tokenize
 )
 
 
@@ -33,7 +24,9 @@ def fusion_retrieval(
     k: int = 10,
     alpha: float = 0.5,
 ) -> List[Document]:
-
+    """
+    Fusion ретривинг контекстов
+    """
     epsilon = 1e-8
 
     bm25_scores = np.array(bm25.get_scores(clean_and_tokenize(query)))

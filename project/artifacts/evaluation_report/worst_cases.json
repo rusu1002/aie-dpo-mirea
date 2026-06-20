@@ -1,0 +1,218 @@
+{
+  "faithfulness": [
+    {
+      "question_id": 54,
+      "question": "Какие налоговые льготы доступны по страхованию жизни?",
+      "faithfulness": 0.16666666666666666,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.5
+    },
+    {
+      "question_id": 69,
+      "question": "Что может покупать неквалифицированный инвестор без тестов с учетом ограничений на иностранные бумаги?",
+      "faithfulness": 0.5,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.4444444444444444
+    },
+    {
+      "question_id": 73,
+      "question": "Обязателен ли для продавцов прием платежей по QR-коду через СБП по сравнению с планом приема цифровых рублей крупным бизнесом?",
+      "faithfulness": 0.5,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.3
+    },
+    {
+      "question_id": 41,
+      "question": "Что происходит дальше, если должник отказывается от общения с коллекторами?",
+      "faithfulness": 0.6,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 1.0
+    },
+    {
+      "question_id": 8,
+      "question": "Как учитываются вклад с кредитом в одном банке при санации либо при отзыве лицензии?",
+      "faithfulness": 0.6,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.36363636363636365
+    },
+    {
+      "question_id": 63,
+      "question": "Какие ограничения на выдачу наличной валюты действуют для средств на счетах по сравнению с деньгами в банковской ячейке?",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.7272727272727273
+    },
+    {
+      "question_id": 33,
+      "question": "Как меняется лимит возмещения по ремонту авто при европротоколе без фотофиксации по сравнению с оформлением через ГИБДД?",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.4
+    },
+    {
+      "question_id": 47,
+      "question": "Какой минимальный срок держать ИИС разных типов, чтобы сохранить право на налоговые льготы?",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.45454545454545453
+    },
+    {
+      "question_id": 39,
+      "question": "Как корректно сравнить доходность НПФ с результатами управляющих компаний СФР с учетом комиссий?",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.15384615384615385
+    },
+    {
+      "question_id": 26,
+      "question": "Сколько максимально вернут по соцвычету и по взносам на ИИС при ставке НДФЛ 22%",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.5833333333333334
+    }
+  ],
+  "answer_relevancy": [
+    {
+      "question_id": 93,
+      "question": "Как подтверждается подписание онлайн-кредита?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.4444444444444444,
+      "contextual_relevancy": 0.15384615384615385
+    },
+    {
+      "question_id": 96,
+      "question": "Кто вправе запрашивать информацию о ценных бумагах умершего?",
+      "faithfulness": 0.6666666666666666,
+      "answer_relevancy": 0.6666666666666666,
+      "contextual_relevancy": 0.3333333333333333
+    },
+    {
+      "question_id": 68,
+      "question": "Как проверить легальность посредника для привлечения финансирования онлайн?",
+      "faithfulness": 0.9,
+      "answer_relevancy": 0.7272727272727273,
+      "contextual_relevancy": 0.46153846153846156
+    },
+    {
+      "question_id": 51,
+      "question": "Как безопасно оформить ОСАГО онлайн через финансовую платформу?",
+      "faithfulness": 0.8888888888888888,
+      "answer_relevancy": 0.7777777777777778,
+      "contextual_relevancy": 0.25
+    },
+    {
+      "question_id": 0,
+      "question": "Каковы лимиты страховой защиты вкладов против НПФ?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8,
+      "contextual_relevancy": 0.5555555555555556
+    },
+    {
+      "question_id": 81,
+      "question": "Как сохранить прожиточный минимум при аресте счетов после решения суда?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8181818181818182,
+      "contextual_relevancy": 0.6923076923076923
+    },
+    {
+      "question_id": 46,
+      "question": "Как проверить полис ОСАГО через НСИС?",
+      "faithfulness": 0.8333333333333334,
+      "answer_relevancy": 0.8333333333333334,
+      "contextual_relevancy": 0.75
+    },
+    {
+      "question_id": 22,
+      "question": "Какие материалы применяют для повышения износостойкости российских банкнот, пример — купюра 200 рублей?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.8333333333333334,
+      "contextual_relevancy": 0.2857142857142857
+    },
+    {
+      "question_id": 90,
+      "question": "Что делать, если пришло сообщение о блокировке карты с просьбой перезвонить по незнакомому номеру?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.875,
+      "contextual_relevancy": 0.7
+    },
+    {
+      "question_id": 27,
+      "question": "Когда заявлять в полицию при мошенничестве или аварии?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 0.875,
+      "contextual_relevancy": 0.5714285714285714
+    }
+  ],
+  "contextual_relevancy": [
+    {
+      "question_id": 78,
+      "question": "Как совместить выплаты по автокредиту с созданием подушки безопасности?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.0
+    },
+    {
+      "question_id": 17,
+      "question": "Зачем частному клиенту следить за рейтингом страховщика на фоне возможной приостановки лицензии?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.0
+    },
+    {
+      "question_id": 3,
+      "question": "Какой налог можно платить со сдачи жилья вместо НДФЛ, чем его ставки отличаются от подоходного налога?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.0
+    },
+    {
+      "question_id": 88,
+      "question": "Чем государственные гарантии по вкладам отличаются от защиты пенсионных накоплений в НПФ?",
+      "faithfulness": 0.7142857142857143,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.0
+    },
+    {
+      "question_id": 43,
+      "question": "Как изменился размер соцвычета на спорт в 2024 по сравнению с 2022?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.0625
+    },
+    {
+      "question_id": 70,
+      "question": "В каких случаях действует госстрахование вкладов?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.07692307692307693
+    },
+    {
+      "question_id": 38,
+      "question": "Как изменился лимит социального вычета на спорт по сравнению с 2022 годом?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.08333333333333333
+    },
+    {
+      "question_id": 80,
+      "question": "Каковы сроки подачи заявлений при ликвидации МФО по сравнению с обращением за возмещением при отзыве лицензии у НПФ?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.08333333333333333
+    },
+    {
+      "question_id": 83,
+      "question": "Как соотносится переплата по займам под 0% при просрочке с законным лимитом по краткосрочным кредитам?",
+      "faithfulness": 1.0,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.08333333333333333
+    },
+    {
+      "question_id": 31,
+      "question": "Где проверить легальность МФО перед оформлением «нуля»?",
+      "faithfulness": 0.75,
+      "answer_relevancy": 1.0,
+      "contextual_relevancy": 0.08333333333333333
+    }
+  ]
+}
